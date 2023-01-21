@@ -1,0 +1,123 @@
+{
+    "menu": [{
+            "menuHeader": "Important Links"
+        },
+
+        {
+            "url": "/",
+            "name": "Dashboard",
+            "icon": "menu-icon tf-icons bx bx-home-circle",
+            "slug": "dashboard-analytics"
+        },
+        {
+            "name": "Plots Registers",
+            "icon": "menu-icon tf-icons bx bx-layout",
+            "slug": "layouts",
+            "submenu": [{
+                    "url": "/layouts/without-menu",
+                    "name": "Without menu",
+                    "slug": "layouts-without-menu"
+                },
+                {
+                    "url": "/layouts/without-navbar",
+                    "name": "Without navbar",
+                    "slug": "layouts-without-navbar"
+                },
+                {
+                    "url": "/layouts/container",
+                    "name": "Container",
+                    "slug": "layouts-container"
+                },
+                {
+                    "url": "/layouts/fluid",
+                    "name": "Fluid",
+                    "slug": "layouts-fluid"
+                },
+                {
+                    "url": "/layouts/blank",
+                    "name": "Blank",
+                    "slug": "layouts-blank",
+                    "target": "_blank"
+                }
+            ]
+        },
+        {
+            "menuHeader": "Housing"
+        },
+        {
+            "name": "Buy and Sell Houses",
+            "icon": "menu-icon tf-icons bx bx bx-dock-top",
+            "slug": "pages-account-settings",
+            "submenu": [{
+                    "url": "/pages/account-settings-account",
+                    "name": "Account",
+                    "slug": "pages-account-settings-account"
+                },
+                {
+                    "url": "/pages/account-settings-notifications",
+                    "name": "Notifications",
+                    "slug": "pages-account-settings-notifications"
+                },
+                {
+                    "url": "/pages/account-settings-connections",
+                    "name": "Connections",
+                    "slug": "pages-account-settings-connections"
+                }
+            ]
+        },
+
+        {
+            "menuHeader": "User Aunthentication"
+        },
+
+
+        {
+            "name": "Authentications",
+            "icon": "menu-icon tf-icons bx bx-lock-open-alt",
+            "slug": "auth",
+            "submenu": [{
+                    "url": "/auth/login-basic",
+                    "name": "Login",
+                    "slug": "auth-login-basic",
+                    "target": "_blank"
+                },
+                {
+                    "url": "/auth/register-basic",
+                    "name": "Register",
+                    "slug": "auth-register-basic",
+                    "target": "_blank"
+                },
+                {
+                    "url": "/auth/forgot-password-basic",
+                    "name": "Forgot Password",
+                    "slug": "auth-forgot-password-basic",
+                    "target": "_blank"
+                }
+            ]
+        },
+
+
+        {
+            "name": "Others",
+            "icon": "menu-icon tf-icons bx bx-detail",
+            "slug": "form-layouts",
+            "submenu": [{
+                    "url": "form/layouts-vertical",
+                    "name": "Vertical Form",
+                    "slug": "form-layouts-vertical"
+                },
+                {
+                    "url": "form/layouts-horizontal",
+                    "name": "Horizontal Form",
+                    "slug": "form-layouts-horizontal"
+                }
+            ]
+        },
+        {
+            "url": "tables/basic",
+            "icon": "menu-icon tf-icons bx bx-table",
+            "name": "Tables",
+            "slug": "tables-basic"
+        }
+    ]
+}
