@@ -11,4 +11,16 @@ class Navbar extends Controller
   {
     return view('content.user-interface.navigationbar');
   }
+  public function home()
+  {
+    return view('home.home');
+  }
+  public function plot()
+  {
+    return view('home.plot');
+  }
+  public function house()
+  {
+    return view('home.house');
+  }
 }

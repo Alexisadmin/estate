@@ -19,6 +19,9 @@ $controller_path = 'App\Http\Controllers';
 
 //user link 
 Route::get('/ui/navbar', $controller_path . '\user_interface\Navbar@index')->name('ui-navbar');
+Route::get('home', $controller_path . '\user_interface\Navbar@home')->name('home');
+Route::get('plot', $controller_path . '\user_interface\Navbar@plot')->name('plot');
+Route::get('house', $controller_path . '\user_interface\Navbar@house')->name('house');
 
 
 // Main Page Route
