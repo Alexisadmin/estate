@@ -10,14 +10,14 @@ use Hash;
 use Illuminate\Support\Arr;
 class UserController extends Controller
 {
-    // function __construct()
-    // {
-    //      $this->middleware('permission:Create|user-edit|user-delete', ['only' => ['index','store']]);
-    //      $this->middleware('permission:user-create', ['only' => ['create','store']]);
-    //      $this->middleware('permission:user-edit', ['only' => ['edit','update']]);
-    //      $this->middleware('permission:user-delete', ['only' => ['destroy']]);
+    function __construct()
+    {
+         $this->middleware('permission:Create|user-edit|user-delete', ['only' => ['index','store']]);
+         $this->middleware('permission:user-create', ['only' => ['create','store']]);
+         $this->middleware('permission:user-edit', ['only' => ['edit','update']]);
+         $this->middleware('permission:user-delete', ['only' => ['destroy']]);
         
-    // }
+    }
     public function index(Request $request)
     {
     $data = User::orderBy('id','DESC')->paginate(5);
