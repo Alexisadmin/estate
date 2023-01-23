@@ -12,7 +12,7 @@ $controller_path = 'App\Http\Controllers';
 
 //user link 
 Route::get('/ui/navbar', $controller_path . '\user_interface\Navbar@index')->name('ui-navbar');
-Route::get('home', $controller_path . '\user_interface\Navbar@home')->name('home');
+Route::get('/', $controller_path . '\user_interface\Navbar@home')->name('home');
 Route::get('plot', $controller_path . '\user_interface\Navbar@plot')->name('plot');
 Route::get('house', $controller_path . '\user_interface\Navbar@house')->name('house');
 
@@ -21,20 +21,20 @@ Route::get('house', $controller_path . '\user_interface\Navbar@house')->name('ho
   
 Auth::routes();
   
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/dasboard', [HomeController::class, 'index'])->name('home');
   
 Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles', RoleController::class);
     Route::resource('users', UserController::class);
     Route::resource('products', ProductController::class);
-    Route::get('logout',[AuthController::class, 'logout']); // Route to logout
+    
 });
 
 
 
 
 // Main Page Route
-Route::get('/', $controller_path . '\dashboard\Analytics@index')->name('dashboard-analytics');
+// Route::get('/dasboard', $controller_path . '\dashboard\Analytics@index')->name('dashboard-analytics');
 
 // layout
 Route::get('/layouts/without-menu', $controller_path . '\layouts\WithoutMenu@index')->name('layouts-without-menu');

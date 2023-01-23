@@ -1,56 +1,67 @@
-@extends('layouts.app')
+@extends('layouts/contentNavbarLayout')
 
+@section('title', 'Users-')
 
 @section('content')
-<div class="row">
-    <div class="col-lg-12 margin-tb">
-        <div class="pull-left">
-            <h2>Role Management</h2>
-        </div>
-        <div class="pull-right">
-        @can('role-create')
-            <a class="btn btn-success" href="{{ route('roles.create') }}"> Create New Role</a>
-            @endcan
-        </div>
-    </div>
+<h5 class="fw-bold py-3 mb-4">
+  <span class="text-muted fw-light">Easy Estate Rwanda /</span> User Roles
+</h5>
+<!-- Contextual Classes -->
+<div class="pull-right">
+  <a class="btn btn-success" href="{{ route('roles.create') }}"> Create New Role</a>
 </div>
-
-
-@if ($message = Session::get('success'))
-    <div class="alert alert-success">
-        <p>{{ $message }}</p>
-    </div>
+<br>
+<div class="card">
+  @if (Session::get('success'))
+  <div class="alert alert-success" role="alert">
+      {{ Session::get('success') }}
+      <button type="button" class="btn-close pull-right" data-bs-dismiss="alert" aria-label="Close">
+      </button>
+  </div>
 @endif
+<br>
+  <div class="table-responsive text-nowrap">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Name</th> 
+          <th>Action</th>         
+          </tr>
+      </thead>
+      @foreach ($roles as $key => $role)
+      <tbody class="table-border-bottom-0">
+        <tr class="table-default">
+          <td><i class="fab fa-sketch fa-lg text-warning me-3"></i> <strong>{{ ++$key }}</strong></td>
+          <td>{{ $role->name}}</td>
+        
+          
+          <td>
+            <div class="dropdown">
+              <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded"></i></button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="{{ route('roles.show',$role->id) }}"><i class="bx bx-show-alt me-1"></i> show</a>
+                <a class="dropdown-item" href="{{ route('roles.edit',$role->id) }}"><i class="bx bx-edit me-1"></i> Edit</a>
+
+                 {!! Form::open(['method' => 'DELETE','route' => ['roles.destroy', $role->id],'class'=>'dropdown-item']) !!}
+         
+                     {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
+         
+                 {!! Form::close() !!}
+         
+             </td>
 
 
-<table class="table table-bordered">
-  <tr>
-     <th>No</th>
-     <th>Name</th>
-     <th width="280px">Action</th>
-  </tr>
-    @foreach ($roles as $key => $role)
-    <tr>
-        <td>{{ ++$i }}</td>
-        <td>{{ $role->name }}</td>
-        <td>
-            <a class="btn btn-info" href="{{ route('roles.show',$role->id) }}">Show</a>
-            @can('role-edit')
-                <a class="btn btn-primary" href="{{ route('roles.edit',$role->id) }}">Edit</a>
-            @endcan
-            @can('role-delete')
-                {!! Form::open(['method' => 'DELETE','route' => ['roles.destroy', $role->id],'style'=>'display:inline']) !!}
-                    {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
-                {!! Form::close() !!}
-            @endcan
-        </td>
-    </tr>
-    @endforeach
-</table>
+              </div>
+            </div>
+          </td>
+        </tr>
+      
+      </tbody>
+      @endforeach
+    </table>
+  </div>
+</div>
+<!--/ Contextual Classes -->
 
-
-{!! $roles->render() !!}
-
-
-<p class="text-center text-primary"><small>Tutorial by ItSolutionStuff.com</small></p>
 @endsection
