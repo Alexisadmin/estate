@@ -1,18 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
+ 
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProductController;
 
 
 $controller_path = 'App\Http\Controllers';
@@ -22,6 +15,21 @@ Route::get('/ui/navbar', $controller_path . '\user_interface\Navbar@index')->nam
 Route::get('home', $controller_path . '\user_interface\Navbar@home')->name('home');
 Route::get('plot', $controller_path . '\user_interface\Navbar@plot')->name('plot');
 Route::get('house', $controller_path . '\user_interface\Navbar@house')->name('house');
+
+
+//Protected route
+  
+Auth::routes();
+  
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+  
+Route::group(['middleware' => ['auth']], function() {
+    Route::resource('roles', RoleController::class);
+    Route::resource('users', UserController::class);
+    Route::get('logout',[AuthController::class, 'logout']); // Route to logout
+});
+
+
 
 
 // Main Page Route
@@ -86,3 +94,7 @@ Route::get('/form/layouts-horizontal', $controller_path . '\form_layouts\Horizon
 
 // tables
 Route::get('/tables/basic', $controller_path . '\tables\Basic@index')->name('tables-basic');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

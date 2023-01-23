@@ -76,22 +76,22 @@
             "icon": "menu-icon tf-icons bx bx-lock-open-alt",
             "slug": "auth",
             "submenu": [{
-                    "url": "/auth/login-basic",
-                    "name": "Login",
-                    "slug": "auth-login-basic",
-                    "target": "_blank"
+                    "url": "users",
+                    "name": "Users",
+                    "slug": "auth-login-basic"
+
                 },
                 {
-                    "url": "/auth/register-basic",
+                    "url": "/users/create",
                     "name": "Register",
-                    "slug": "auth-register-basic",
-                    "target": "_blank"
+                    "slug": "auth-register-basic"
+
                 },
                 {
                     "url": "/auth/forgot-password-basic",
                     "name": "Forgot Password",
-                    "slug": "auth-forgot-password-basic",
-                    "target": "_blank"
+                    "slug": "auth-forgot-password-basic"
+
                 }
             ]
         },
