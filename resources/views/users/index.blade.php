@@ -4,7 +4,7 @@
 
 @section('content')
 <h5 class="fw-bold py-3 mb-4">
-  <span class="text-muted fw-light">EER /</span> Registered users
+  <span class="text-muted fw-light">Easy Estate Rwanda /</span> Registered users
 </h5>
 <!-- Contextual Classes -->
 <div class="pull-right">
@@ -15,7 +15,7 @@
   @if (Session::get('success'))
   <div class="alert alert-success" role="alert">
       {{ Session::get('success') }}
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+      <button type="button" class="btn-close pull-right" data-bs-dismiss="alert" aria-label="Close">
       </button>
   </div>
 @endif
@@ -41,15 +41,15 @@
           <td><span class="badge bg-label-primary me-1">
             @if(!empty($user->getRoleNames()))
             @foreach($user->getRoleNames() as $v)
-               <label class="badge badge-success">{{ $v }}</label>
+             {{ $v }}
             @endforeach
           @endif</span></td>
           <td>
             <div class="dropdown">
               <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded"></i></button>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="{{ route('users.edit',$user->id) }}"><i class="bx bx-edit-alt me-1"></i> show</a>
-                <a class="dropdown-item" href="{{ route('users.edit',$user->id) }}"><i class="bx bx-trash me-1"></i> Edit</a>
+                <a class="dropdown-item" href="{{ route('users.edit',$user->id) }}"><i class="bx bx-show-alt me-1"></i> show</a>
+                <a class="dropdown-item" href="{{ route('users.edit',$user->id) }}"><i class="bx bx-edit me-1"></i> Edit</a>
 
                  {!! Form::open(['method' => 'DELETE','route' => ['users.destroy', $user->id],'class'=>'dropdown-item']) !!}
          

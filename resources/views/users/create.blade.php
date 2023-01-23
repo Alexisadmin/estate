@@ -48,7 +48,7 @@
                 <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
               </div>
               <div class="mb-3 form-password-toggle">
-                <label class="form-label" for="password">Password</label>
+                <label class="form-label" for="password">Confirm Password</label>
                 <div class="input-group input-group-merge">
                   <input type="password" id="password" class="form-control" name="confirm-password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password" />
                   <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
@@ -59,11 +59,11 @@
                 <label class="form-label" for="password">Roles</label>
                 <div class="input-group input-group-merge">
                    
-                    {!! Form::select('roles[]', $roles,[], array('class' => 'form-control')) !!}
+                  {!! Form::select('roles[]', $roles,$userRole, array('class' => 'form-control','multiple')) !!}
                 </div>
             </div>
             <button class="btn btn-primary d-grid w-100">
-              Sign up
+           Change
             </button>
           </form>
 
