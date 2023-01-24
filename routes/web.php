@@ -5,8 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\ProductController;
-
+use App\Http\Controllers\PlotController;
+// use App\Http\Controllers\ProductController;
 
 $controller_path = 'App\Http\Controllers';
 
@@ -15,10 +15,7 @@ Route::get('/ui/navbar', $controller_path . '\user_interface\Navbar@index')->nam
 Route::get('/', $controller_path . '\user_interface\Navbar@home')->name('home');
 Route::get('plot', $controller_path . '\user_interface\Navbar@plot')->name('plot');
 Route::get('house', $controller_path . '\user_interface\Navbar@house')->name('house');
-
-
-//Protected route
-  
+ 
 Auth::routes();
   
 Route::get('/dasboard', [HomeController::class, 'index'])->name('home');
@@ -26,7 +23,7 @@ Route::get('/dasboard', [HomeController::class, 'index'])->name('home');
 Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles', RoleController::class);
     Route::resource('users', UserController::class);
-    Route::resource('products', ProductController::class);
+    Route::resource('admin-plots', PlotController::class);
     
 });
 
