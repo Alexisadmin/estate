@@ -1,7 +1,7 @@
 <?php
-
+//  namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Route;
- 
+
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
@@ -11,10 +11,10 @@ use App\Http\Controllers\PlotController;
 $controller_path = 'App\Http\Controllers';
 
 //user link 
-Route::get('/ui/navbar', $controller_path . '\user_interface\Navbar@index')->name('ui-navbar');
-Route::get('/', $controller_path . '\user_interface\Navbar@home')->name('home');
-Route::get('plot', $controller_path . '\user_interface\Navbar@plot')->name('plot');
-Route::get('house', $controller_path . '\user_interface\Navbar@house')->name('house');
+Route::get('/ui/navbar', $controller_path . '\NavigationBarController@index')->name('ui-navbar');
+Route::get('/', $controller_path . '\NavigationBarController@home')->name('home');
+Route::get('plot', $controller_path . '\NavigationBarController@plot')->name('plot');
+Route::get('house', $controller_path . '\\NavigationBarController@house')->name('house');
  
 Auth::routes();
   
