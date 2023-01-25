@@ -29,23 +29,18 @@
             "menuHeader": "Housing"
         },
         {
-            "name": "Buy and Sell Houses",
+            "name": "Houses",
             "icon": "menu-icon tf-icons bx bx bx-dock-top",
             "slug": "pages-account-settings",
             "submenu": [{
-                    "url": "/pages/account-settings-account",
-                    "name": "Account",
+                    "url": "admin-houses",
+                    "name": "registered Houses",
                     "slug": "pages-account-settings-account"
                 },
                 {
-                    "url": "/pages/account-settings-notifications",
-                    "name": "Notifications",
+                    "url": "admin-houses/create",
+                    "name": "New House",
                     "slug": "pages-account-settings-notifications"
-                },
-                {
-                    "url": "/pages/account-settings-connections",
-                    "name": "Connections",
-                    "slug": "pages-account-settings-connections"
                 }
             ]
         },

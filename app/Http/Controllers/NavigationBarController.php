@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Plot;
+use App\Models\House;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -24,6 +25,7 @@ class NavigationBarController extends Controller
     }
     public function house()
     {
-      return view('home.house');
+      $houses=House::get();
+      return view('home.house',compact('houses'));
 }
 }

@@ -6,7 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PlotController;
-// use App\Http\Controllers\ProductController;
+use App\Http\Controllers\HouseController;
 
 $controller_path = 'App\Http\Controllers';
 
@@ -24,7 +24,8 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles', RoleController::class);
     Route::resource('users', UserController::class);
     Route::resource('admin-plots', PlotController::class);
-    
+    Route::resource('admin-houses', HouseController::class);
+   
 });
 
 

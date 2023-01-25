@@ -18,6 +18,7 @@
         <h5 class="card-title"> Plot for sale in {{ $plot->province }} Province</h5>
         <p class="card-text"> A good plot with all nessesary documnts in {{ $plot->district }} District</p>
       </div>
+      <a href="javascript:;" class="btn btn-sm btn-primary">View more</a>
     </div>
   </div>
 
