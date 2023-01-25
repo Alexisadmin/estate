@@ -7,6 +7,7 @@ use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PlotController;
 use App\Http\Controllers\HouseController;
+use App\Http\Controllers\CarController;
 
 $controller_path = 'App\Http\Controllers';
 
@@ -15,6 +16,7 @@ Route::get('/ui/navbar', $controller_path . '\NavigationBarController@index')->n
 Route::get('/', $controller_path . '\NavigationBarController@home')->name('home');
 Route::get('plot', $controller_path . '\NavigationBarController@plot')->name('plot');
 Route::get('house', $controller_path . '\\NavigationBarController@house')->name('house');
+Route::get('cars', $controller_path . '\\NavigationBarController@car')->name('cars');
  
 Auth::routes();
   
@@ -25,14 +27,12 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('users', UserController::class);
     Route::resource('admin-plots', PlotController::class);
     Route::resource('admin-houses', HouseController::class);
+    Route::resource('admin-cars', CarController::class);
    
 });
 
 
 
-
-// Main Page Route
-// Route::get('/dasboard', $controller_path . '\dashboard\Analytics@index')->name('dashboard-analytics');
 
 // layout
 Route::get('/layouts/without-menu', $controller_path . '\layouts\WithoutMenu@index')->name('layouts-without-menu');
@@ -41,12 +41,6 @@ Route::get('/layouts/fluid', $controller_path . '\layouts\Fluid@index')->name('l
 Route::get('/layouts/container', $controller_path . '\layouts\Container@index')->name('layouts-container');
 Route::get('/layouts/blank', $controller_path . '\layouts\Blank@index')->name('layouts-blank');
 
-// pages
-Route::get('/pages/account-settings-account', $controller_path . '\pages\AccountSettingsAccount@index')->name('pages-account-settings-account');
-Route::get('/pages/account-settings-notifications', $controller_path . '\pages\AccountSettingsNotifications@index')->name('pages-account-settings-notifications');
-Route::get('/pages/account-settings-connections', $controller_path . '\pages\AccountSettingsConnections@index')->name('pages-account-settings-connections');
-Route::get('/pages/misc-error', $controller_path . '\pages\MiscError@index')->name('pages-misc-error');
-Route::get('/pages/misc-under-maintenance', $controller_path . '\pages\MiscUnderMaintenance@index')->name('pages-misc-under-maintenance');
 
 // authentication
 Route::get('/auth/login-basic', $controller_path . '\authentications\LoginBasic@index')->name('auth-login-basic');

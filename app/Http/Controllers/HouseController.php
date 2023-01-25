@@ -57,8 +57,7 @@ class HouseController extends Controller
         $plot = new House;
         $plot->name = $request->name;
         $plot->surname = $request->surname;
-        $plot->province = $request->province;
-        $plot->surname = $request->surname;
+        $plot->province = $request->province;       
         $plot->district = $request->district;
         $plot->sector = $request->sector;
         $plot->cell = $request->cell;

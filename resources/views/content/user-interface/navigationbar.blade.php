@@ -14,17 +14,23 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Home</a>
+          <a class="nav-link active" aria-current="page" href="/"><i class="bx bx-home mb-1"></i>Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/plot">Plots</a>
+          <a class="nav-link" href="/plot"> <i class="bx bx-globe mb-1"></i>Plots for Sale</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/house"> <i class="bx bxl-adobe mb-2"></i>Houses for Sales</a>
+          <a class="nav-link" href="/house"> <i class="bx bx-building mb-1"></i>Houses for Sales & Rent</a>
         </li>
-        <box-icon type='solid' name='building-house'></box-icon>
         <li class="nav-item">
-          <a class="nav-link" href="javascript:void(0)">Contact</a>
+          <a class="nav-link" href="/cars"> <i class="bx bx-car mb-1"></i>Car Rentinf & Sales</a>
+        </li>
+      
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0)"><i class="bx bx-car mb-1"></i>About us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0)"><i class="bx bx-phone mb-1"></i>Contact</a>
         </li>
        
       

@@ -49,7 +49,22 @@
             "menuHeader": "User Aunthentication"
         },
 
-
+        {
+            "name": "Car Management",
+            "icon": "menu-icon tf-icons bx bx-detail",
+            "slug": "form-layouts",
+            "submenu": [{
+                    "url": "admin-cars",
+                    "name": "Cars Available",
+                    "slug": "form-layouts-vertical"
+                },
+                {
+                    "url": "admin-cars/create",
+                    "name": "Add new car",
+                    "slug": "form-layouts-horizontal"
+                }
+            ]
+        },
         {
             "name": "Authentications",
             "icon": "menu-icon tf-icons bx bx-lock-open-alt",
@@ -73,30 +88,9 @@
 
                 }
             ]
-        },
-
-
-        {
-            "name": "Others",
-            "icon": "menu-icon tf-icons bx bx-detail",
-            "slug": "form-layouts",
-            "submenu": [{
-                    "url": "form/layouts-vertical",
-                    "name": "Vertical Form",
-                    "slug": "form-layouts-vertical"
-                },
-                {
-                    "url": "form/layouts-horizontal",
-                    "name": "Horizontal Form",
-                    "slug": "form-layouts-horizontal"
-                }
-            ]
-        },
-        {
-            "url": "tables/basic",
-            "icon": "menu-icon tf-icons bx bx-table",
-            "name": "Tables",
-            "slug": "tables-basic"
         }
+
+
+
     ]
 }

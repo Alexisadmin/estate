@@ -35,7 +35,7 @@
           </div>
        
           <form method="POST" action="{{ route('login') }}">
-            @csrf
+            {{ csrf_field() }}
             <div class="mb-3">
               <label for="email" class="form-label">Email or Username</label>
               <input type="text" class="form-control" id="email" name="email" placeholder="Enter your email or username" autofocus>
