@@ -23,17 +23,12 @@
           <a class="nav-link" href="/house"> <i class="bx bx-building mb-1"></i>Houses for Sales & Rent</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/cars"> <i class="bx bx-car mb-1"></i>Car Rentinf & Sales</a>
+          <a class="nav-link" href="/cars"> <i class="bx bx-car mb-1"></i>Car Renting & Sales</a>
         </li>
       
         <li class="nav-item">
-          <a class="nav-link" href="javascript:void(0)"><i class="bx bx-car mb-1"></i>About us</a>
+          <a class="nav-link" href="/about-us"><i class="bx bx-user mb-1"></i>About us</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="javascript:void(0)"><i class="bx bx-phone mb-1"></i>Contact</a>
-        </li>
-       
-      
       </ul>
       <li class="d-flex">
         <a class="" href="javascript:void(0)" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

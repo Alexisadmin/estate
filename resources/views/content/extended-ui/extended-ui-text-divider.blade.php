@@ -14,7 +14,7 @@
       <h5 class="card-header">Basic</h5>
       <div class="card-body">
         <div class="divider">
-          <div class="divider-text">Text</div>
+          <div class="divider-text">dwgfveraghrthytyjumkikuikujuiikujuyText</div>
         </div>
       </div>
     </div>

@@ -17,10 +17,11 @@ Route::get('/', $controller_path . '\NavigationBarController@home')->name('home'
 Route::get('plot', $controller_path . '\NavigationBarController@plot')->name('plot');
 Route::get('house', $controller_path . '\\NavigationBarController@house')->name('house');
 Route::get('cars', $controller_path . '\\NavigationBarController@car')->name('cars');
- 
+Route::get('about-us', $controller_path . '\\NavigationBarController@about')->name('about-us');
+
 Auth::routes();
   
-Route::get('/dasboard', [HomeController::class, 'index'])->name('home');
+Route::get('/dasboard', [HomeController::class, 'index'])->name('dasboard');
   
 Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles', RoleController::class);
@@ -31,15 +32,6 @@ Route::group(['middleware' => ['auth']], function() {
    
 });
 
-
-
-
-// layout
-Route::get('/layouts/without-menu', $controller_path . '\layouts\WithoutMenu@index')->name('layouts-without-menu');
-Route::get('/layouts/without-navbar', $controller_path . '\layouts\WithoutNavbar@index')->name('layouts-without-navbar');
-Route::get('/layouts/fluid', $controller_path . '\layouts\Fluid@index')->name('layouts-fluid');
-Route::get('/layouts/container', $controller_path . '\layouts\Container@index')->name('layouts-container');
-Route::get('/layouts/blank', $controller_path . '\layouts\Blank@index')->name('layouts-blank');
 
 
 // authentication
@@ -81,13 +73,3 @@ Route::get('/icons/boxicons', $controller_path . '\icons\Boxicons@index')->name(
 Route::get('/forms/basic-inputs', $controller_path . '\form_elements\BasicInput@index')->name('forms-basic-inputs');
 Route::get('/forms/input-groups', $controller_path . '\form_elements\InputGroups@index')->name('forms-input-groups');
 
-// form layouts
-Route::get('/form/layouts-vertical', $controller_path . '\form_layouts\VerticalForm@index')->name('form-layouts-vertical');
-Route::get('/form/layouts-horizontal', $controller_path . '\form_layouts\HorizontalForm@index')->name('form-layouts-horizontal');
-
-// tables
-Route::get('/tables/basic', $controller_path . '\tables\Basic@index')->name('tables-basic');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
