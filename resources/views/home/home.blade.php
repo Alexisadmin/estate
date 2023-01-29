@@ -23,7 +23,7 @@
           </div>
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100" src="{{asset('assets/img/house/h-3.jpg')}}" alt="Second slide" />
+          <img class="d-block w-100" src="{{asset('assets/img/house/h-9.jpg')}}" alt="Second slide" />
           <div class="carousel-caption d-none d-md-block">
             <h3>Houses for Rent or sales</h3>
             <p>Now With Easy Estate you can Available House for Rent and Sales</p>
