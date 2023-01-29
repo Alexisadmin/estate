@@ -21,8 +21,9 @@ Route::get('about-us', $controller_path . '\\NavigationBarController@about')->na
 
 Auth::routes();
   
-Route::get('/dasboard', [HomeController::class, 'index'])->name('dasboard');
-  
+Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
+// Route::get('dashboard', $controller_path . '\\HomeController@index')->name('dasboard');
+ 
 Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles', RoleController::class);
     Route::resource('users', UserController::class);

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('surname');
+            $table->string('status')->default('Waiting');
             $table->string('province');
             $table->string('district');
             $table->string('sector');

@@ -1,18 +1,19 @@
 {
-    "menu": [{
-            "menuHeader": "Important Links"
-        },
+    "menu": [
 
         {
-            "url": "/dashboard",
+            "url": "dashboard",
             "name": "Dashboard",
             "icon": "menu-icon tf-icons bx bx-home-circle",
             "slug": "dashboard-analytics"
         },
         {
+            "menuHeader": "Plots"
+        },
+        {
             "name": "Plots Registers",
             "icon": "menu-icon tf-icons bx bx-layout",
-            "slug": "layouts",
+            "slug": "admin-plots",
             "submenu": [{
                     "url": "/admin-plots",
                     "name": "Plots",
@@ -33,22 +34,22 @@
             "icon": "menu-icon tf-icons bx bx bx-dock-top",
             "slug": "pages-account-settings",
             "submenu": [{
-                    "url": "admin-houses",
-                    "name": "registered Houses",
-                    "slug": "pages-account-settings-account"
+                    "url": "/admin-houses",
+                    "name": "Available Houses",
+                    "slug": "houses-for-rent"
                 },
                 {
-                    "url": "admin-houses/create",
+                    "url": "/admin-houses/create",
                     "name": "New House",
-                    "slug": "pages-account-settings-notifications"
+                    "slug": "houses-create"
                 }
             ]
         },
 
-        {
-            "menuHeader": "User Aunthentication"
-        },
 
+        {
+            "menuHeader": "Cars"
+        },
         {
             "name": "Car Management",
             "icon": "menu-icon tf-icons bx bx-detail",
@@ -66,6 +67,9 @@
             ]
         },
         {
+            "menuHeader": "Aunthentication"
+        },
+        {
             "name": "Authentications",
             "icon": "menu-icon tf-icons bx bx-lock-open-alt",
             "slug": "auth",
@@ -79,12 +83,6 @@
                     "url": "/users/create",
                     "name": "Register",
                     "slug": "auth-register-basic"
-
-                },
-                {
-                    "url": "/auth/forgot-password-basic",
-                    "name": "Forgot Password",
-                    "slug": "auth-forgot-password-basic"
 
                 }
             ]

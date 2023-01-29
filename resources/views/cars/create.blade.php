@@ -1,6 +1,6 @@
 @extends('layouts/contentNavbarLayout')
 
-@section('title', ' Horizontal Layouts - Forms')
+@section('title', 'Cars')
 
 @section('content')
 <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Easy Estate Rwanda/</span>Car Rental and Sell</h4>
@@ -183,7 +183,7 @@
             </div>
           </div>
           <div class="row mb-3">
-            <label class="col-sm-2 form-label" for="basic-icon-default-message">Price in REF</label>
+            <label class="col-sm-2 form-label" for="basic-icon-default-message">Price in RWF</label>
             <div class="col-sm-10">
               <div class="input-group input-group-merge">
                 <span id="basic-icon-default-message2" class="input-group-text"><i class="bx bx-money"></i></span>

@@ -31,6 +31,8 @@ class PermissionTableSeeder extends Seeder
                'edit-house',
                'add-house',
                'delete-house',
+               'dashboard-details',
+               'homepage-content'
                
             ];
           

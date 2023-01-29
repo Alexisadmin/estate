@@ -1,6 +1,6 @@
 @extends('layouts/contentNavbarLayout')
 
-@section('title', 'Table')
+@section('title', 'Plot')
 
 
 @section('content')

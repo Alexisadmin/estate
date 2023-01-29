@@ -15,22 +15,24 @@
       <div class="card">
         <div class="card-body">
           <div class="app-brand justify-content-center">
-            <img src="{{ asset('assets/img/logo/state.jpeg') }}" style="border-radius:2px;with:200px; height:200px" >
+            <img src="{{ asset('assets/img/logo/state.jpeg') }}" style="border-radius:2px;with:200px; height:100px" >
             
           </div>
-          
-          <div class="app-brand justify-content-center">
-        <strong>Login</strong>  
-        @if ($errors->any())
+          @if ($errors->any())
           <div class="alert alert-danger">
-              <strong>Whoops!</strong> There were some problems with your input.<br><br>
+              
               <ul>
                   @foreach ($errors->all() as $error)
                       <li>{{ $error }}</li>
                   @endforeach
               </ul>
+              <button type="button" class="btn-close float-right" data-bs-dismiss="alert" aria-label="Close">
+   
           </div>
       @endif
+          <div class="app-brand justify-content-center">
+        <strong>Administrator Login</strong>  
+      
                
           </div>
        
