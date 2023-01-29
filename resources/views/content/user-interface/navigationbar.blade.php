@@ -29,9 +29,12 @@
         <li class="nav-item">
           <a class="nav-link" href="/about-us"><i class="bx bx-user mb-1"></i>About us</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact-us"><i class="bx bx-phone mb-1"></i>Contact us</a>
+        </li>
       </ul>
       <li class="d-flex">
-        <a class="" href="login" id=""  aria-expanded="false">
+        <a class="" href="/login" id=""  aria-expanded="false">
         Login
         </a>
         

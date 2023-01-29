@@ -43,4 +43,9 @@ class NavigationBarController extends Controller
       $cars=Car::get();
       return view('home.about',compact('cars'));
     }
+    public function contact()
+    {
+      $cars=Car::get();
+      return view('home.contact',compact('cars'));
+    }
 }

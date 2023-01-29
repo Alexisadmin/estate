@@ -18,10 +18,11 @@ Route::get('plot', $controller_path . '\NavigationBarController@plot')->name('pl
 Route::get('house', $controller_path . '\\NavigationBarController@house')->name('house');
 Route::get('cars', $controller_path . '\\NavigationBarController@car')->name('cars');
 Route::get('about-us', $controller_path . '\\NavigationBarController@about')->name('about-us');
+Route::get('contact-us', $controller_path . '\\NavigationBarController@contact')->name('contact-us');
 
 Auth::routes();
   
-Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 // Route::get('dashboard', $controller_path . '\\HomeController@index')->name('dasboard');
  
 Route::group(['middleware' => ['auth']], function() {
