@@ -70,6 +70,24 @@
             "menuHeader": "Aunthentication"
         },
         {
+            "name": "Home Page Post",
+            "icon": "menu-icon tf-icons bx bx-file",
+            "slug": "auth",
+            "submenu": [{
+                    "url": "posts",
+                    "name": "Home page",
+                    "slug": "home-basic"
+
+                },
+                {
+                    "url": "/posts/create",
+                    "name": "Add Imange",
+                    "slug": "post-home"
+
+                }
+            ]
+        },
+        {
             "name": "Authentications",
             "icon": "menu-icon tf-icons bx bx-lock-open-alt",
             "slug": "auth",

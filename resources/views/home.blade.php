@@ -27,9 +27,8 @@
             <p class="mb-4"> 
              
               {{-- <span class="fw-bold">72%</span> <br>  sales of different furnuture.</p> --}}
-      @can('dasboard')
+      @can('dashboard-details')
       <a href="admin-plots/" class="btn btn-sm btn-outline-primary">View more</a>
-
       @endcan
             
           </div>
@@ -56,7 +55,9 @@
                   <i class="bx bx-dots-vertical-rounded"></i>
                 </button>
                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt3">
-                  <a class="dropdown-item" href="admin-plots">View More</a>
+                 @can('dashboard-details')          
+                 <a class="dropdown-item" href="admin-plots">View More</a>
+                  @endcan 
                   {{-- <a class="dropdown-item" href="javascript:void(0);">Delete</a> --}}
                 </div>
               </div>
@@ -82,7 +83,9 @@
                   <i class="bx bx-dots-vertical-rounded"></i>
                 </button>
                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt6">
+                  @can('dashboard-details') 
                   <a class="dropdown-item" href="javascript:void(0);">View More</a>
+                  @endcan
                   {{-- <a class="dropdown-item" href="javascript:void(0);">Delete</a> --}}
                 </div>
               </div>
@@ -141,14 +144,15 @@
                   <i class="bx bx-dots-vertical-rounded "></i>
                 </button>
                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt4">
+                  @can('dashboard-details') 
                   <a class="dropdown-item" href="/admin-cars">View More</a>
-                 
+                 @endcan
                 </div>
               </div>
             </div>
             <span class="d-block mb-1">Cars</span>
             <h3 class="card-title text-nowrap mb-2"> <br>
-              {{number_format(DB::table('cars')->count())}}
+            <strong class="text-warning">  {{number_format(DB::table('cars')->count())}}</strong>
             </h3>
             {{-- <small class="text-danger fw-semibold"><i class='bx bx-down-arrow-alt'></i> -14.82%</small> --}}
           </div>
@@ -166,14 +170,16 @@
                   <i class="bx bx-dots-vertical-rounded"></i>
                 </button>
                 <div class="dropdown-menu" aria-labelledby="cardOpt1">
+                  @can('dashboard-details') 
                   <a class="dropdown-item" href="admin-cars">View More</a>
+                  @endcan
                   {{-- <a class="dropdown-item" href="javascript:void(0);">Delete</a> --}}
                 </div>
               </div>
             </div>
             <span class="fw-semibold d-block mb-1">Available Cars for Rent</span>
             <h3 class="card-title mb-2">
-            <strong class="text-warning">  {{number_format(DB::table('cars')->where('usage','Rent')->count())}} </strong>
+            <strong class="text-warning"> <strong class="text-warning"> {{number_format(DB::table('cars')->where('usage','Rent')->count())}} </strong> </strong>
             </h3>
             {{-- <small class="text-success fw-semibold">< class='bx bx-up-arrow-alt'></small> --}}
           </div>

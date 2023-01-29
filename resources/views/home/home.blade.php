@@ -18,22 +18,22 @@
         <div class="carousel-item active">
           <img class="d-block w-100" src="{{asset('assets/img/car/c1.jpg')}}" alt="First slide" />
           <div class="carousel-caption d-none d-md-block">
-            <h3>First slide</h3>
-            <p>Eos mutat malis maluisset et, agam ancillae quo te, in vim congue pertinacia.</p>
+            <h3>New Car Arrival</h3>
+            <p>Now you can book new car with our company</p>
           </div>
         </div>
         <div class="carousel-item">
           <img class="d-block w-100" src="{{asset('assets/img/house/h-3.jpg')}}" alt="Second slide" />
           <div class="carousel-caption d-none d-md-block">
-            <h3>Second slide</h3>
-            <p>In numquam omittam sea.</p>
+            <h3>Houses for Rent or sales</h3>
+            <p>Now With Easy Estate you can Available House for Rent and Sales</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100" src="{{asset('assets/img/house/h-2.jpg')}}" alt="Third slide" />
+          <img class="d-block w-100" src="{{asset('assets/img/plot/pl-2.jpg')}}" alt="Third slide" />
           <div class="carousel-caption d-none d-md-block">
-            <h3>Third slide</h3>
-            <p>Lorem ipsum dolor sit amet, virtute consequat ea qui, minim graeco mel no.</p>
+            <h3>Plot For Sales</h3>
+            <p>We help you to get plot for sales in different areas</p>
           </div>
         </div>
       </div>

@@ -8,7 +8,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\PlotController;
 use App\Http\Controllers\HouseController;
 use App\Http\Controllers\CarController;
-
+use App\Http\Controllers\PostController;
 $controller_path = 'App\Http\Controllers';
 
 //user link 
@@ -30,6 +30,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('admin-plots', PlotController::class);
     Route::resource('admin-houses', HouseController::class);
     Route::resource('admin-cars', CarController::class);
+    Route::resource('posts', PostController::class);
    
 });
 

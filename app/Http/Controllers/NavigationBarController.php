@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use App\Models\Plot;
 use App\Models\Car;
 use App\Models\House;
+use App\Models\Post;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -15,7 +17,8 @@ class NavigationBarController extends Controller
     }
     public function home()
     {
-      return view('home.home');
+      $homes=Post::get();
+      return view('home.home',compact('homes'));
     }
     public function plot()
     {
