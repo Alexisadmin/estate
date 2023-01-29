@@ -2,7 +2,7 @@
 
   <!-- ! Hide app brand if navbar-full -->
   <div class="app-brand demo">
-    <a href="{{url('/dashboard')}}" class="app-brand-link">
+    <a href="{{url('/home')}}" class="app-brand-link">
       <span class="app-brand-logo demo">
         <img src="{{ asset('assets/img/logo/state.jpeg') }}" width="12%" >
       

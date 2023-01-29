@@ -5,7 +5,7 @@
             "url": "home",
             "name": "Dashboard",
             "icon": "menu-icon tf-icons bx bx-home-circle",
-            "slug": "dashboard-analytics"
+            "slug": "home"
         },
         {
             "menuHeader": "Plots"
@@ -22,7 +22,7 @@
                 {
                     "url": "/admin-plots/create",
                     "name": "Add New Plot",
-                    "slug": "create-plot"
+                    "slug": "admin-plots/create"
                 }
             ]
         },
@@ -32,16 +32,16 @@
         {
             "name": "Houses",
             "icon": "menu-icon tf-icons bx bx bx-dock-top",
-            "slug": "pages-account-settings",
+            "slug": "Houses",
             "submenu": [{
                     "url": "/admin-houses",
                     "name": "Available Houses",
-                    "slug": "houses-for-rent"
+                    "slug": "/admin-houses"
                 },
                 {
                     "url": "/admin-houses/create",
                     "name": "New House",
-                    "slug": "houses-create"
+                    "slug": "admin-houses/create"
                 }
             ]
         },
@@ -53,16 +53,16 @@
         {
             "name": "Car Management",
             "icon": "menu-icon tf-icons bx bx-detail",
-            "slug": "form-layouts",
+            "slug": "Car Management",
             "submenu": [{
                     "url": "admin-cars",
                     "name": "Cars Available",
-                    "slug": "form-layouts-vertical"
+                    "slug": "admin-cars"
                 },
                 {
                     "url": "admin-cars/create",
                     "name": "Add new car",
-                    "slug": "form-layouts-horizontal"
+                    "slug": "admin-cars/create"
                 }
             ]
         },
