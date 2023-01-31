@@ -2,7 +2,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Sailor Bootstrap Template - Index</title>
+  <title>Easy Estate Rwanda</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -105,7 +105,7 @@
 
         <div class="row content">
           <div class="col-lg-6">
-            <h2>easy estate Rwana</h2>
+            <h2>easy estate Rwanda</h2>
             <i>Move to what moves you</i>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
