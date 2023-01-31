@@ -17,13 +17,13 @@
           <a class="nav-link active" aria-current="page" href="/"><i class="bx bx-home mb-1"></i>Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/plot"> <i class="bx bx-globe mb-1"></i>Plots for Sale</a>
+          <a class="nav-link" href="/plot"> <i class="bx bx-globe mb-1"></i>Plots </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/house"> <i class="bx bx-building mb-1"></i>Houses for Sales & Rent</a>
+          <a class="nav-link" href="/house"> <i class="bx bx-building mb-1"></i>Houses </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/cars"> <i class="bx bx-car mb-1"></i>Car Renting & Sales</a>
+          <a class="nav-link" href="/cars"> <i class="bx bx-car mb-1"></i>Cars</a>
         </li>
       
         <li class="nav-item">
