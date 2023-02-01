@@ -33,7 +33,9 @@
       @endif
           
           
-          {!! Form::open(['route' => 'users.store', 'method' => 'POST']) !!}   <div class="mb-3">
+          {!! Form::open(['route' => 'users.store', 'method' => 'POST']) !!}  
+          {{ csrf_field() }}
+          <div class="mb-3">
               <label for="username" class="form-label">Names</label>
               <input type="text" class="form-control" id="username" name="name" placeholder="Enter your Names" autofocus>
             </div>

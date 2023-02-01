@@ -34,6 +34,7 @@
           
           
          {!! Form::model($user, ['method' => 'PATCH','route' => ['users.update', $user->id]]) !!}
+         
             <div class="mb-3">
               <label for="username" class="form-label">Names</label>
               {!! Form::text('name', null, array('placeholder' => 'Name','class' => 'form-control')) !!}

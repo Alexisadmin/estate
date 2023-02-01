@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Crypt;
 
 class PostController extends Controller
 {
@@ -28,18 +29,18 @@ class PostController extends Controller
             'status' => 'required',
             'image' => 'required',
         ]);
-        $plot =new Post;
-        $plot->title = $request->title;
-        $plot->detail = $request->detail;
-        $plot->status = $request->status;
+        $post =new Post;
+        $post->title = $request->title;
+        $post->detail = $request->detail;
+        $post->status = $request->status;
         if ($fimage = $request->file('image'))
         {
            $imageDestinationPath = 'uploads/';                        
            $Add_front_image = date('YmdHis') . "." . $fimage->getClientOriginalExtension();
            $fimage->move($imageDestinationPath, $Add_front_image);
-           $plot->image = $Add_front_image;
+           $post->image = $Add_front_image;
         }
-        $plot->save();
+        $post->save();
         return redirect()->back()->with('success',''.$request->title.' Content has added successfully');
     
     }
@@ -51,26 +52,29 @@ class PostController extends Controller
     }
 
    
-    public function edit(Post $post)
-    {
-        //
+    public function edit($id)
+    {  $encry = Crypt::decrypt($id);
+       $post=Post::find($encry);
+       return view('post.edit',compact('post'));
     }
 
    
-    public function update(Request $request, Post $post)
+    public function update(Request $request,$id)
     {
-        $plot =Post::find($id);
-        $plot->title = $request->title;
-        $plot->detail = $request->detail;
-        $plot->status = $request->status;
+        $post =Post::find($id);
+        $post->title = $request->title;
+        $post->detail = $request->detail;
+        $post->status = $request->status;
         if ($fimage = $request->file('image'))
         {
            $imageDestinationPath = 'uploads/';                        
            $Add_front_image = date('YmdHis') . "." . $fimage->getClientOriginalExtension();
            $fimage->move($imageDestinationPath, $Add_front_image);
-           $plot->image = $Add_front_image;
+           $post->image = $Add_front_image;
         }
-        $plot->save();
+        $post->save();
+        return redirect()->back()->with('success',''.$request->title.' Content has updated successfully');
+    
     }
 
     /**
@@ -79,8 +83,11 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Post $post)
+    public function destroy($id)
     {
-        //
+        $encId = Crypt::decrypt($id);
+        Post::find($encId)->delete();
+        return redirect()->route('posts.index')->with('success',' posts  has deleted successfully');
+    
     }
 }

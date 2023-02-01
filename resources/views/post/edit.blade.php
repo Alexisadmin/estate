@@ -20,16 +20,16 @@
                 @endif
         </div>
       <div class="card-body">
-        <form class="form form-vertical" method="POST" action="/posts" enctype="multipart/form-data">
-            {{ csrf_field() }}
-
+        <form class="form form-vertical" method="POST" action="/posts/{{ $post->id }}" enctype="multipart/form-data">
+          @method('PATCH')       {{ csrf_field() }}
+      
             
           <div class="row mb-3">
             <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Title</label>
             <div class="col-sm-10">
               <div class="input-group input-group-merge">
                 <span id="basic-icon-default-fullname2" class="input-group-text"><i class="bx bx-file"></i></span>
-                <input type="text" value="{{$post->name}}" name="title" class="form-control" placeholder="New car arrival">
+                <input type="text" value="{{$post->title}}" name="title" class="form-control" placeholder="New car arrival">
               </div>
               @if ($errors->has('title'))
               <span class="text-danger">{{ $errors->first('title') }}</span>

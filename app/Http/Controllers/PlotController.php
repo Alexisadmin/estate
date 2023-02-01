@@ -195,7 +195,7 @@ class PlotController extends Controller
         return redirect()->route('admin-plots.index')->with('success','New plot has added successfully');
     }
 
-    public function destroy(Plot $plot)
+    public function destroy($id)
     {
         $encId = Crypt::decrypt($id);
         Plot::find($encId)->delete();
