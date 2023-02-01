@@ -19,6 +19,7 @@ Route::get('house', $controller_path . '\\NavigationBarController@house')->name(
 Route::get('cars', $controller_path . '\\NavigationBarController@car')->name('cars');
 Route::get('about-us', $controller_path . '\\NavigationBarController@about')->name('about-us');
 Route::get('contact-us', $controller_path . '\\NavigationBarController@contact')->name('contact-us');
+Route::get('more-plot/{id}', $controller_path . '\\NavigationBarController@MorePlot')->name('more-plot');
 
 Auth::routes();
   

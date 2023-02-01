@@ -36,7 +36,7 @@
           <li><a class="nav-link scrollto" href="contact-us">Contact</a></li>
           <li class="dropdown"><a href="#"><span>Admin</span> <i class="bi bi-chevron-down"></i></a>
             <ul>             
-              <li class="dropdown"><a href="#"><span>Login</span> <i class="bi bi-clock"></i></a>
+              <li class="dropdown"><a href="login"><span>Login</span> <i class="bi bi-clock"></i></a>
               </li>
               
             </ul>
@@ -84,7 +84,7 @@
                 <p class="Text-success">Now Available</p>
                 <div class="portfolio-links">         
                 
-                <a  href="/admin-plots/{{Crypt::encrypt($plot['id'])}}" title="More Details"><i class="bx bx-link"></i></a>
+                <a  href="/more-plot/{{Crypt::encrypt($plot['id'])}}" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
             </div>

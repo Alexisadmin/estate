@@ -5,9 +5,9 @@ use App\Models\Plot;
 use App\Models\Car;
 use App\Models\House;
 use App\Models\Post;
-
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Crypt;
 
 class NavigationBarController extends Controller
 {
@@ -47,5 +47,12 @@ class NavigationBarController extends Controller
     {
       $cars=Car::get();
       return view('home.contact',compact('cars'));
+    }
+    public function MorePlot($id)
+    {
+      $encId = Crypt::decrypt($id);
+      $plot   = Plot::find($encId);
+     
+      return view('plots.show', compact('plot') );
     }
 }
