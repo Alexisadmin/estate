@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Easy Estate Rwanda- plot</title>
+  <title>Easy Estate Rwanda- house</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
   <!-- Favicons -->
@@ -31,15 +31,15 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto" href="">plot</a></li>
-          <li><a class="nav-link scrollto active" href="plot">Plots</a></li>
-          <li><a class="nav-link scrollto" href="house">House</a></li>
+          <li><a class="nav-link scrollto" href="">house</a></li>
+          <li><a class="nav-link scrollto " href="plot">Plot</a></li>
+          <li><a class="nav-link scrollto active" href="house">House</a></li>
           <li><a class="nav-link scrollto " href="cars">Cars</a></li>
           <li><a class="nav-link scrollto" href="about-us">about-us</a></li>
           <li><a class="nav-link scrollto" href="contact-us">Contact</a></li>
-          <li class="dropdown"><a href="/login"><span>Admin</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#"><span>Admin</span> <i class="bi bi-chevron-down"></i></a>
             <ul>             
-              <li class="dropdown"><a href="/login"><span>Login</span> <i class="bi bi-clock"></i></a>
+              <li class="dropdown"><a href="login"><span>Login</span> <i class="bi bi-clock"></i></a>
               </li>
               
             </ul>
@@ -59,10 +59,10 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Available Plot</h2>
+          <h2>Available house</h2>
           <ol>
-            <li><a href="{{ route('plot') }}">Plot</a></li>
-            <li>Plot details</li>
+            <li><a href="{{ route('house') }}">House</a></li>
+            <li>house details</li>
           </ol>
         </div>
 
@@ -80,19 +80,19 @@
               <div class="swiper-wrapper align-items-center">
 
                 <div class="swiper-slide">
-                  <img src="{{  asset('uploads/' . $plot->front_image) }}" alt="">
+                  <img src="{{  asset('uploads/' . $house->front_image) }}" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="{{  asset('uploads/' . $plot->side_image) }}" alt="">
+                  <img src="{{  asset('uploads/' . $house->side_image) }}" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="{{  asset('uploads/' . $plot->view_1) }}" alt="">
+                  <img src="{{  asset('uploads/' . $house->view_1) }}" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="{{  asset('uploads/' . $plot->view_2) }}" alt="">
+                  <img src="{{  asset('uploads/' . $house->view_2) }}" alt="">
                 </div>
               </div>
               <div class="swiper-pagination"></div>
@@ -101,19 +101,21 @@
 
           <div class="col-lg-4">
             <div class="portfolio-info">
-              <h3>Plot Details</h3>
+              <h3>House Details</h3>
               <ul>
-                <li><strong>Province</strong>:{{ $plot->province }}</li>
-                <li><strong>District</strong>: {{ $plot->district }}</li>
-                <li><strong>Sector</strong>: {{ $plot->sector }}</li>
-                <li><strong>Measures</strong>: {{ $plot->width }}X{{ $plot->length }}</li>
-                <li>This Plot is located in<strong> {{ $plot->village }}</strong></li>
-                
+                <li><strong class="text-warning">This house is available for {{ $house->housing_type }}</strong></li>
+                <li><strong>Province</strong>:{{ $house->province }}</li>
+                <li><strong>District</strong>: {{ $house->district }}</li>
+                <li><strong>Sector</strong>: {{ $house->sector }}</li>
+                <li><strong>Price</strong>{{number_format( $house->price) }} FRW</li>
+                <li><strong>this houses also has</strong>: {{ $house->bedroom +$house->bathroom  }} <strong> Rooms and</strong> {{ $house->salon }} Sallon</li>
+                <li>This house is located in<strong> {{ $house->village }}</strong></li>
+                <li><strong></strong></li>
 
               </ul>
-              <li><a href="https://wa.me/c/8613207970914"><x-bxl-whatsapp style="height:40px" />See our Catalog also</a></li>
+              <li><a href="https://wa.me/c/8613207970914"><x-bxl-whatsapp style="height:40px" />See our Catalog Here</a></li>
             </div>
-            <br><br>
+            
             <div class="portfolio-description">
               <h2>For more details</h2>
               <p>
@@ -153,8 +155,8 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="">plot</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="plot">Plots</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="">Plot</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="house">houses</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="house">Houses</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="cars">Cars</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="about-us">About-us</a></li>
@@ -164,8 +166,8 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Services</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Buy & Selling plots</a></li>
-              {{-- <li><i class="bx bx-chevron-right"></i> <a href="#">Buying Plots</a></li> --}}
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Buy & Selling houses</a></li>
+              {{-- <li><i class="bx bx-chevron-right"></i> <a href="#">Buying houses</a></li> --}}
               <li><i class="bx bx-chevron-right"></i> <a href="#">Buying Houses</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Selling House</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Car Rental</a></li>

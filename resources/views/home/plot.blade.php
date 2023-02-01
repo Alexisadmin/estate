@@ -36,7 +36,7 @@
           <li><a class="nav-link scrollto" href="contact-us">Contact</a></li>
           <li class="dropdown"><a href="#"><span>Admin</span> <i class="bi bi-chevron-down"></i></a>
             <ul>             
-              <li class="dropdown"><a href="login"><span>Login</span> <i class="bi bi-clock"></i></a>
+              <li class="dropdown"><a href="{{ route('login') }}"><span>Login</span> <i class="bi bi-clock"></i></a>
               </li>
               
             </ul>
@@ -58,7 +58,7 @@
         <div class="d-flex justify-content-between align-items-center">
           <h2>Easy Estate Rwanda</h2>
           <ol>
-            <li><a href="index.html">Plot</a></li>
+            <li><a href="{{ route('plot') }}">Plot</a></li>
             <li>Available  Plots</li>
           </ol>
         </div>

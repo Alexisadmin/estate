@@ -55,4 +55,11 @@ class NavigationBarController extends Controller
      
       return view('plots.show', compact('plot') );
     }
+    public function MoreHouses($id)
+    {
+      $encId = Crypt::decrypt($id);
+      $house   = House::find($encId);
+     
+      return view('houses.show', compact('house') );
+    }
 }
