@@ -42,13 +42,13 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="/"><i class="bx bx-globe mb-o"></i>Home</a></li>
-          <li><a href="plot"><i class="bx bx-building mb-0"></i>Plots</a></li>
-          <li><a href="house"><i class="bx bx-building mb-0"></i>Houses</a></li>
-          <li><a href="cars"><i class="bx bx-car mb-1"></i>Car </a></li>
-          <li><a href="about-us"><i class="bx bx-user mb-1"></i>about-us</a></li>
-          <a href="/contact-us" class="active"><i class="bx bx-phone mb-1"></i>Contact us</a>
-          <li class="dropdown"><a href="#"><span>Admin</span> <i class="bi bi-chevron-down"></i></a>
+          <li><a href="/"></i>Home</a></li>
+          <li><a href="plot">Plots</a></li>
+          <li><a href="house">Houses</a></li>
+          <li><a href="cars">Car </a></li>
+          <li><a href="about-us">about-us</a></li>
+          <a href="/contact-us" class="active">Contact us</a>
+          <li class="dropdown"><a href="#"><span>Admin</span> </a>
             <ul>
               <li><a href="login">Login</a></li>
               
@@ -85,10 +85,7 @@
     <section id="contact" class="contact">
       <div class="container">
 
-        <div >
-            <iframe style="border:0; width: 100%; height: 270px;"  src="https://maps.google.com/maps?q=maison%20tressor%20KN115%20St&t=&z=9&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-          
-          </div>
+       
             <div class="row mt-5">
 
           <div class="col-lg-4">
@@ -145,6 +142,10 @@
             </form>
 
           </div>
+          <div >
+            <iframe style="border:0; width: 100%; height: 270px;"  src="https://maps.google.com/maps?q=maison%20tressor%20KN115%20St&t=&z=9&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+          
+          </div>
 
         </div>
 
@@ -154,69 +155,69 @@
   </main><!-- End #main -->
  <!-- ======= Footer ======= -->
  <footer id="footer">
+
+
   <div class="footer-top">
     <div class="container">
       <div class="row">
 
-        <div class="col-lg-3 col-md-6">
-          <div class="footer-info">
-            <h3>Easy Estate Rwanda</h3>
-            <p>
-              Rwanda-kigali
-              Nyarugenge-nyamirambo 
-              Maison tresor-2
-              nd floor <br>
-              KN115 St<br><br>
-              <strong>Phone:</strong> +250 7878 12489 <br>
-              +8613207970914<br>
-              <strong>Email:</strong> easyestate@gmail.com<br>
-            </p>
-            <div class="social-links mt-3">
-              {{-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> --}}
-              <a href="https://www.facebook.com/profile.php?id=100068283980411&mibextid=LQQJ4d" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="https://www.instagram.com/invites/contact/?i=iwtfa6kobx47&utm_content=q6go02x" class="instagram"><i class="bx bxl-instagram"></i></a>
-              {{-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> --}}
-              <a href="https://youtube.com/@nrwanda2153" class="linkedin"><i class="bx bxl-youtube"></i></a>
-            </div>
-          </div>
+        <div class="col-lg-3 col-md-6 footer-contact">
+          <h3>Easy Estate Rwanda</h3>
+          <p>
+            Rwanda-kigali <br>
+            Nyarugenge District <br>
+            nyamirambo Sector <br>
+            Maison tresor-2 <sup>nd</sup>Floor <br>
+            <strong>Phone:</strong> +250 787 812 489 / +8613207970914 <br>
+            <strong>Email:</strong> easyestate@gmail.com<br>
+          </p>
         </div>
 
-        <div class="col-lg-2 col-md-6 footer-links">
+        <div class="col-lg-3 col-md-6 footer-links">
           <h4>Useful Links</h4>
           <ul>
             <li><i class="bx bx-chevron-right"></i> <a href="">Home</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="plot">Plots</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="house">Houses</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="car">Cars</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Contact</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="cars">Cars</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="about-us">About-us</a></li>
           </ul>
         </div>
 
         <div class="col-lg-3 col-md-6 footer-links">
           <h4>Our Services</h4>
           <ul>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Plot Selling</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">House Rental</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#"> Car Sales</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Buy & Selling plots</a></li>
+            {{-- <li><i class="bx bx-chevron-right"></i> <a href="#">Buying Plots</a></li> --}}
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Buying Houses</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Selling House</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="#">Car Rental</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">House Rental</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Car Selling</a></li>
+            
           </ul>
         </div>
 
-        <div class="col-lg-4 col-md-6 footer-newsletter">
-          <h4>Easy Estate Rwanda</h4>
-          <p>move to what moves you. </p>
-          <form action="" method="post">
-            {{-- <input type="email" name="email"><input type="submit" value="Subscribe"> --}}
-          </form>
-
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Our Social Networks</h4>
+          <p>Please Follow us on our social Media</p>
+          <div class="social-links mt-3">
+            <a href="https://www.facebook.com/profile.php?id=100068283980411&mibextid=LQQJ4d" class="facebook"><i class="bx bxl-facebook"></i></a>
+            <a href="https://www.instagram.com/invites/contact/?i=iwtfa6kobx47&utm_content=q6go02x" class="instagram"><i class="bx bxl-instagram"></i></a>
+            <a href="https://youtube.com/@nrwanda2153" class="linkedin"><i class="bx bxl-youtube"></i></a>
+         
+            {{-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> --}}
+          </div>
         </div>
 
       </div>
     </div>
   </div>
 
-  <div class="container">
+  <div class="container py-4">
     <div class="copyright">
       &copy; Copyright <strong><span>Easy Estate Rwanda</span></strong>. All Rights Reserved
     </div>
@@ -224,7 +225,7 @@
       <!-- All the links in the footer should remain intact. -->
       <!-- You can delete the links only if you purchased the pro version. -->
       <!-- Licensing information: https://bootstrapmade.com/license/ -->
-      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/sailor-free-bootstrap-theme/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/butterfly-free-bootstrap-theme/ -->
       Designed by <a href="https://github.com/Alexisadmin/Alexisadmin">@alexisadmin</a>
     </div>
   </div>

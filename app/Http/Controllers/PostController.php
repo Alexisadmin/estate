@@ -73,7 +73,7 @@ class PostController extends Controller
            $post->image = $Add_front_image;
         }
         $post->save();
-        return redirect()->back()->with('success',''.$request->title.' Content has updated successfully');
+        return redirect()->route('posts.index')->with('success',''.$request->title.' Content has updated successfully');
     
     }
 
