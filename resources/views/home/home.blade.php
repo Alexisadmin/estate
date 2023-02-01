@@ -30,7 +30,7 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#">Home</a></li>
+          <li><a class="nav-link scrollto active" href="">Home</a></li>
           <li><a class="nav-link scrollto" href="plot">Plots</a></li>
           <li><a class="nav-link scrollto" href="house">House</a></li>
           <li><a class="nav-link scrollto " href="cars">Cars</a></li>

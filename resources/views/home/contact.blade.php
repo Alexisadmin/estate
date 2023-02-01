@@ -36,31 +36,29 @@
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="/">Easy Estate Rwanda</a></h1>
+      {{-- <h1 class="logo me-auto"><a href="/">Easy Estate Rwanda</a></h1> --}}
       <!-- Uncomment below if you prefer to use an image logo -->
-      {{-- <a href="" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> --}}
+      <a href="" class="logo me-auto"><img src="assets/img/logo/state.jpeg" alt="" class="img-fluid"></a>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="/"></i>Home</a></li>
-          <li><a href="plot">Plots</a></li>
-          <li><a href="house">Houses</a></li>
-          <li><a href="cars">Car </a></li>
-          <li><a href="about-us">about-us</a></li>
-          <a href="/contact-us" class="active">Contact us</a>
-          <li class="dropdown"><a href="#"><span>Admin</span> </a>
-            <ul>
-              <li><a href="login">Login</a></li>
+          <li><a class="nav-link scrollto " href="#">Home</a></li>
+          <li><a class="nav-link scrollto" href="plot">Plots</a></li>
+          <li><a class="nav-link scrollto" href="house">House</a></li>
+          <li><a class="nav-link scrollto " href="cars">Cars</a></li>
+          <li><a class="nav-link scrollto" href="about-us">about-us</a></li>
+          <li><a class="nav-link scrollto active" href="contact-us">Contact</a></li>
+          <li class="dropdown"><a href="#"><span>Admin</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>             
+              <li class="dropdown"><a href="#"><span>Login</span> <i class="bi bi-clock"></i></a>
+              </li>
               
             </ul>
-          </li>      
-  
-       
-          {{-- <li><a href="" class="getstarted">Get Started</a></li> --}}
+          </li>
+         
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-  
+      </nav>
     </div>
   </header><!-- End Header -->
 
