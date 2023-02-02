@@ -73,40 +73,39 @@ class HouseController extends Controller
         $plot->price = $request->price; 
 
         if ($fimage = $request->file('front_image'))
-         {
-            $imageDestinationPath = 'uploads/';                        
-            $Add_front_image = date('YmdHis') . "." . $fimage->getClientOriginalExtension();
-            $fimage->move($imageDestinationPath, $Add_front_image);
-            $plot->front_image = $Add_front_image;
-         }
-
-         
-        if ($simage = $request->file('side_image'))
         {
            $imageDestinationPath = 'uploads/';                        
-           $post_SImage = date('YmdHis') . "." . $simage->getClientOriginalExtension();
-           $simage->move($imageDestinationPath, $post_SImage);
-           $plot->side_image = $post_SImage;
+           $Add_front_image = date('Y') . "." . $fimage->getClientOriginalExtension();
+           $fimage->move($imageDestinationPath, $Add_front_image);
+           $plot->front_image = $Add_front_image;
         }
 
         
-        if ($_image = $request->file('view_1'))
-         {
-            $imageDestinationPath = 'uploads/';                        
-            $post_VImage = date('YmdHis') . "." . $_image->getClientOriginalExtension();
-            $_image->move($imageDestinationPath, $post_VImage);
-            $plot->view_1 = $post_VImage;
-         }
+       if ($simage = $request->file('side_image'))
+       {
+          $imageDestinationPath = 'uploads/';                        
+          $post_SImage = date('YmdH') . "." . $simage->getClientOriginalExtension();
+          $simage->move($imageDestinationPath, $post_SImage);
+          $plot->side_image = $post_SImage;
+       }
 
-         
-        if ($v_image = $request->file('view_2'))
+       
+       if ($_image = $request->file('view_1'))
         {
            $imageDestinationPath = 'uploads/';                        
-           $_postImage = date('YmdHis') . "." . $v_image->getClientOriginalExtension();
-           $v_image->move($imageDestinationPath, $_postImage);
-           $plot->view_2 = $_postImage;
+           $post_VImage = date('dHis') . "." . $_image->getClientOriginalExtension();
+           $_image->move($imageDestinationPath, $post_VImage);
+           $plot->view_1 = $post_VImage;
         }
-  
+
+        
+       if ($v_image = $request->file('view_2'))
+       {
+          $imageDestinationPath = 'uploads/';                        
+          $_postImage = date('Ym') . "." . $v_image->getClientOriginalExtension();
+          $v_image->move($imageDestinationPath, $_postImage);
+          $plot->view_2 = $_postImage;
+       }
         $plot->save();
         return redirect()->back()->with('success','New House for '.$request->housing_type.''.' has added successfully');
     
@@ -170,37 +169,39 @@ class HouseController extends Controller
         $plot->price = $request->price; 
 
         if ($fimage = $request->file('front_image'))
-         {
-            $imageDestinationPath = 'uploads/';                        
-            $Add_front_image = date('YmdHis') . "." . $fimage->getClientOriginalExtension();
-            $fimage->move($imageDestinationPath, $Add_front_image);
-            $plot->front_image = $Add_front_image;
-         }
-         
-        if ($simage = $request->file('side_image'))
         {
            $imageDestinationPath = 'uploads/';                        
-           $post_SImage = date('YmdHis') . "." . $simage->getClientOriginalExtension();
-           $simage->move($imageDestinationPath, $post_SImage);
-           $plot->side_image = $post_SImage;
+           $Add_front_image = date('Y') . "." . $fimage->getClientOriginalExtension();
+           $fimage->move($imageDestinationPath, $Add_front_image);
+           $plot->front_image = $Add_front_image;
         }
-        
-        if ($_image = $request->file('view_1'))
-         {
-            $imageDestinationPath = 'uploads/';                        
-            $post_VImage = date('YmdHis') . "." . $_image->getClientOriginalExtension();
-            $_image->move($imageDestinationPath, $post_VImage);
-            $plot->view_1 = $post_VImage;
-         }
 
-         
-        if ($v_image = $request->file('view_2'))
+        
+       if ($simage = $request->file('side_image'))
+       {
+          $imageDestinationPath = 'uploads/';                        
+          $post_SImage = date('YmdH') . "." . $simage->getClientOriginalExtension();
+          $simage->move($imageDestinationPath, $post_SImage);
+          $plot->side_image = $post_SImage;
+       }
+
+       
+       if ($_image = $request->file('view_1'))
         {
            $imageDestinationPath = 'uploads/';                        
-           $_postImage = date('YmdHis') . "." . $v_image->getClientOriginalExtension();
-           $v_image->move($imageDestinationPath, $_postImage);
-           $plot->view_2 = $_postImage;
+           $post_VImage = date('dHis') . "." . $_image->getClientOriginalExtension();
+           $_image->move($imageDestinationPath, $post_VImage);
+           $plot->view_1 = $post_VImage;
         }
+
+        
+       if ($v_image = $request->file('view_2'))
+       {
+          $imageDestinationPath = 'uploads/';                        
+          $_postImage = date('Ym') . "." . $v_image->getClientOriginalExtension();
+          $v_image->move($imageDestinationPath, $_postImage);
+          $plot->view_2 = $_postImage;
+       }
   
         $plot->save();
         return redirect()->route('admin-houses.index')->with('success',' House detail for '.$request->housing_type.''.' has updated successfully');

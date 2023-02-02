@@ -72,28 +72,28 @@ and establish our culture, brand, business strategies, and who we are
 as professionals in the business world today. We encourage both our teammates 
 and our clients to hold us accountable to these values:</p>
             <div class="icon-box">
-              <div class="icon"><i class="bx bx-fingerprint"></i></div>
+              <div class="icon"><x-heroicon-o-arrow-right-circle /></div>
               <h4 class="title">1</h4>
           <p> Innovate and Lead
           </p>  </div>
 
             <div class="icon-box">
-              <div class="icon"><i class="bx bx-gift"></i></div>
+              <div class="icon"><x-heroicon-o-arrow-right-circle /></i></div>
               <h4 class="title"><a href="">2</a></h4>
            <p> Embrace Accountability</p>  </div>
 
             <div class="icon-box">
-              <div class="icon"><i class="bx bx-atom"></i></div>
+              <div class="icon"> <x-heroicon-o-arrow-right-circle /></div>
               <h4 class="title"><a href="">3</a></h4>
               <p> Focus on Solutions
               </p></div>
               <div class="icon-box">
-                <div class="icon"><i class="bx bx-atom"></i></div>
+                <div class="icon"><x-heroicon-o-arrow-right-circle /></div>
                 <h4 class="title"><a href="">4</a></h4>
                 <p> Build Relationships and Have Fun
                 </p></div>
                 <div class="icon-box">
-                  <div class="icon"><i class="bx bx-atom"></i></div>
+                  <div class="icon"><x-heroicon-o-arrow-right-circle /></div>
                   <h4 class="title"><a href="">5</a></h4>
                   <p> Be Great and Never Settle
                   </p></div>
@@ -158,12 +158,7 @@ and our clients to hold us accountable to these values:</p>
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <img src="assets/img/logo/ceo.jpeg" class="testimonial-img" alt="">
-                <div class="social">
-                  <a href="#"><i class="bi bi-twitter"></i></a>
-                  <a href="#"><i class="bi bi-facebook"></i></a>
-                  <a href="$"><i class="bi bi-instagram"></i></a>
-                  <a href="#"><i class="bi bi-linkedin"></i></a>
-                </div>
+               
                 <h3>Anathole URAGIWE NIMANA</h3>
                 <h4>CEO &amp; Founder</h4>
                 <p>
