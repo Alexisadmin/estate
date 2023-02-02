@@ -187,7 +187,7 @@
             <div class="col-sm-10">
               <div class="input-group input-group-merge">
                 <span id="basic-icon-default-message2" class="input-group-text"><i class="bx bx-money"></i></span>
-                <input type="text" name="price" class="form-control text-success" placeholder="6000" aria-label="" aria-describedby="basic-icon-default-building"/>
+                <input type="number" name="price" class="form-control text-success" placeholder="6000" aria-label="" aria-describedby="basic-icon-default-building"/>
               </div>
               @if ($errors->has('price'))
               <span class="text-danger">{{ $errors->first('price') }}</span>

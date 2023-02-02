@@ -62,4 +62,11 @@ class NavigationBarController extends Controller
      
       return view('houses.show', compact('house') );
     }
+    public function MoreCar($id)
+    {
+      $encId = Crypt::decrypt($id);
+      $car   = Car::find($encId);
+     
+      return view('cars.show', compact('car') );
+    }
 }

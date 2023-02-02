@@ -21,6 +21,7 @@ Route::get('about-us', $controller_path . '\\NavigationBarController@about')->na
 Route::get('contact-us', $controller_path . '\\NavigationBarController@contact')->name('contact-us');
 Route::get('more-plot/{id}', $controller_path . '\\NavigationBarController@MorePlot')->name('more-plot');
 Route::get('house-details/{id}', $controller_path . '\\NavigationBarController@MoreHouses')->name('house-details');
+Route::get('cars-details/{id}', $controller_path . '\\NavigationBarController@MoreCar')->name('cars-details');
 
 Auth::routes();
   
