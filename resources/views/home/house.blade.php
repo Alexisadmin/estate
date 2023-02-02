@@ -28,15 +28,15 @@
   
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto " href="#">Home</a></li>
-          <li><a class="nav-link scrollto " href="plot">Plots</a></li>
-          <li><a class="nav-link scrollto active" href="house">House</a></li>
-          <li><a class="nav-link scrollto " href="cars">Cars</a></li>
-          <li><a class="nav-link scrollto" href="about-us">about-us</a></li>
-          <li><a class="nav-link scrollto" href="contact-us">Contact</a></li>
+          <li><a class="nav-link scrollto " href="">Home</a></li>
+          <li><a class="nav-link scrollto " href="{{ route('plot') }}">Plots</a></li>
+          <li><a class="nav-link scrollto active" href="{{ route('house') }}">House</a></li>
+          <li><a class="nav-link scrollto " href="{{ route('cars') }}">Cars</a></li>
+          <li><a class="nav-link scrollto" href="{{ route('about-us') }}">about-us</a></li>
+          <li><a class="nav-link scrollto" href="{{ route('contact-us') }}">Contact</a></li>
           <li class="dropdown"><a href="#"><span>Admin</span> <i class="bi bi-chevron-down"></i></a>
             <ul>             
-              <li class="dropdown"><a href="login"><span>Login</span> <i class="bi bi-clock"></i></a>
+              <li class="dropdown"><a href="{{ route('login') }}"><span>Login</span> <i class="bi bi-lock"></i></a>
               </li>
               
             </ul>
