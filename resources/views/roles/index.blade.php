@@ -1,6 +1,6 @@
 @extends('layouts/contentNavbarLayout')
 
-@section('title', 'Users-')
+@section('title', 'Roles and Permission-')
 
 @section('content')
 <h5 class="fw-bold py-3 mb-4">
@@ -8,7 +8,9 @@
 </h5>
 <!-- Contextual Classes -->
 <div class="pull-right">
+  @can('role-create')
   <a class="btn btn-success" href="{{ route('roles.create') }}"> Create New Role</a>
+  @endcan
 </div>
 <br>
 <div class="card">

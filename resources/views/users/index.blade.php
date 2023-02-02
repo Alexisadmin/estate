@@ -8,7 +8,9 @@
 </h5>
 <!-- Contextual Classes -->
 <div class="pull-right">
+  @can('user-create')
   <a class="btn btn-success" href="{{ route('users.create') }}"> Create New User</a>
+  @endcan
 </div>
 <br>
 <div class="card">
@@ -48,7 +50,7 @@
             <div class="dropdown">
               <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded"></i></button>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="{{ route('users.edit',$user->id) }}"><i class="bx bx-show-alt me-1"></i> show</a>
+                {{-- <a class="dropdown-item" href="{{ route('users.show',$user->id) }}"><i class="bx bx-show-alt me-1"></i> show</a> --}}
                 <a class="dropdown-item" href="{{ route('users.edit',$user->id) }}"><i class="bx bx-edit me-1"></i> Edit</a>
 
                  {!! Form::open(['method' => 'DELETE','route' => ['users.destroy', $user->id],'class'=>'dropdown-item']) !!}

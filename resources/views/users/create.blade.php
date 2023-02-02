@@ -23,12 +23,15 @@
           </div>
           @if ($errors->any())
           <div class="alert alert-danger">
-              <strong>Whoops!</strong> There were some problems with your input.<br><br>
+              <strong>Whoops!</strong><br>
               <ul>
                   @foreach ($errors->all() as $error)
                       <li>{{ $error }}</li>
+                      
                   @endforeach
               </ul>
+              <button type="button" class="btn-close pull-right" data-bs-dismiss="alert" aria-label="Close">
+              </button>
           </div>
       @endif
           
@@ -59,9 +62,13 @@
             </div>
             <div class="mb-3 form-password-toggle">
                 <label class="form-label" for="password">Roles</label>
-                <div class="input-group input-group-merge">
-                   
-                  {!! Form::select('roles[]', $roles,$userRole, array('class' => 'form-control','multiple')) !!}
+               <div class="controls">
+                                            
+                <select name="roles" id="" class="form-control">
+                    @foreach ($roles as $role)
+                        <option value="{{ $role->id }}">{{ $role->name }}</option>
+                    @endforeach
+                </select>
                 </div>
             </div>
             <button class="btn btn-primary d-grid w-100">
@@ -69,12 +76,12 @@
             </button>
           </form>
 
-          <p class="text-center">
+          {{-- <p class="text-center">
             <span>Already have an account?</span>
             <a href="{{url('login')}}">
               <span>Sign in instead</span>
             </a>
-          </p>
+          </p> --}}
         </div>
       </div>
     </div>

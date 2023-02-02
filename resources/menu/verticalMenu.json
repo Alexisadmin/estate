@@ -102,6 +102,18 @@
                     "name": "Register",
                     "slug": "auth-register-basic"
 
+                },
+
+                {
+                    "url": "/roles",
+                    "name": "Roles and Permission",
+                    "slug": "auth-register-basic"
+
+                }, {
+                    "url": "/roles/create",
+                    "name": "Grant Permission",
+                    "slug": "auth-register-basic"
+
                 }
             ]
         }

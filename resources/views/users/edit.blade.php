@@ -69,12 +69,12 @@
             </button>
           </form>
 
-          <p class="text-center">
+          {{-- <p class="text-center">
             <span>Already have an account?</span>
             <a href="{{url('login')}}">
               <span>Sign in instead</span>
             </a>
-          </p>
+          </p> --}}
         </div>
       </div>
     </div>
