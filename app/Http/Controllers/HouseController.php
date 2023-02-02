@@ -75,7 +75,7 @@ class HouseController extends Controller
         if ($fimage = $request->file('front_image'))
         {
            $imageDestinationPath = 'uploads/';                        
-           $Add_front_image = date('Y') . "." . $fimage->getClientOriginalExtension();
+           $Add_front_image = date('sY') . "." . $fimage->getClientOriginalExtension();
            $fimage->move($imageDestinationPath, $Add_front_image);
            $plot->front_image = $Add_front_image;
         }
@@ -84,7 +84,7 @@ class HouseController extends Controller
        if ($simage = $request->file('side_image'))
        {
           $imageDestinationPath = 'uploads/';                        
-          $post_SImage = date('YmdH') . "." . $simage->getClientOriginalExtension();
+          $post_SImage = date('sYmdH') . "." . $simage->getClientOriginalExtension();
           $simage->move($imageDestinationPath, $post_SImage);
           $plot->side_image = $post_SImage;
        }
@@ -93,7 +93,7 @@ class HouseController extends Controller
        if ($_image = $request->file('view_1'))
         {
            $imageDestinationPath = 'uploads/';                        
-           $post_VImage = date('dHis') . "." . $_image->getClientOriginalExtension();
+           $post_VImage = date('sdHis') . "." . $_image->getClientOriginalExtension();
            $_image->move($imageDestinationPath, $post_VImage);
            $plot->view_1 = $post_VImage;
         }
@@ -102,7 +102,7 @@ class HouseController extends Controller
        if ($v_image = $request->file('view_2'))
        {
           $imageDestinationPath = 'uploads/';                        
-          $_postImage = date('Ym') . "." . $v_image->getClientOriginalExtension();
+          $_postImage = date('sYm') . "." . $v_image->getClientOriginalExtension();
           $v_image->move($imageDestinationPath, $_postImage);
           $plot->view_2 = $_postImage;
        }
@@ -171,7 +171,7 @@ class HouseController extends Controller
         if ($fimage = $request->file('front_image'))
         {
            $imageDestinationPath = 'uploads/';                        
-           $Add_front_image = date('Y') . "." . $fimage->getClientOriginalExtension();
+           $Add_front_image = date('sY') . "." . $fimage->getClientOriginalExtension();
            $fimage->move($imageDestinationPath, $Add_front_image);
            $plot->front_image = $Add_front_image;
         }
@@ -180,7 +180,7 @@ class HouseController extends Controller
        if ($simage = $request->file('side_image'))
        {
           $imageDestinationPath = 'uploads/';                        
-          $post_SImage = date('YmdH') . "." . $simage->getClientOriginalExtension();
+          $post_SImage = date('sYmdH') . "." . $simage->getClientOriginalExtension();
           $simage->move($imageDestinationPath, $post_SImage);
           $plot->side_image = $post_SImage;
        }
@@ -189,7 +189,7 @@ class HouseController extends Controller
        if ($_image = $request->file('view_1'))
         {
            $imageDestinationPath = 'uploads/';                        
-           $post_VImage = date('dHis') . "." . $_image->getClientOriginalExtension();
+           $post_VImage = date('sdHis') . "." . $_image->getClientOriginalExtension();
            $_image->move($imageDestinationPath, $post_VImage);
            $plot->view_1 = $post_VImage;
         }
@@ -198,7 +198,7 @@ class HouseController extends Controller
        if ($v_image = $request->file('view_2'))
        {
           $imageDestinationPath = 'uploads/';                        
-          $_postImage = date('Ym') . "." . $v_image->getClientOriginalExtension();
+          $_postImage = date('sYm') . "." . $v_image->getClientOriginalExtension();
           $v_image->move($imageDestinationPath, $_postImage);
           $plot->view_2 = $_postImage;
        }

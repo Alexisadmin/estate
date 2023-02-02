@@ -23,10 +23,11 @@
           <div class="card-body">
             <h5 class="card-title text-secondary">Sold plots</h5>
              <h5> <strong class="text-warning float-center">{{number_format(DB::table('plots')->where('status','sold')->count())}}</strong> 
-          
-            <p class="mb-4"> 
-             
-              {{-- <span class="fw-bold">72%</span> <br>  sales of different furnuture.</p> --}}
+         
+          @can('user-create')
+                      <p class="mb-0"> 
+            <span class="fw-bold float-right">{{number_format(DB::table('users')->count())}}</span> <br> Users</p> 
+            @endcan
       @can('dashboard-details')
       <a href="admin-plots/" class="btn btn-sm btn-outline-primary">View more</a>
       @endcan
@@ -117,8 +118,8 @@
           <div id="">
             
           </div>
-          <div class="text-center fw-semibold pt-3 mb-2">Houses Available for Rent <br>
-          <strong class="text-warning">  {{number_format(DB::table('houses')->where('housing_type','Rent')->count())}} </strong> 
+          <div class="text-center fw-semibold pt-3 mb-2">Houses Available for Sales <br>
+          <strong class="text-warning">  {{number_format(DB::table('houses')->where('housing_type','Sale')->count())}} </strong> 
           </div>
           <div class="text-center fw-semibold pt-3 mb-2">Total houses Rent This Year <br>
             <strong class="text-warning">  {{number_format(DB::table('houses')->where('housing_type','Rent')->count())}} </strong> 
