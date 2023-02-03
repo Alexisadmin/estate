@@ -228,6 +228,15 @@
                   <span class="text-danger">{{ $errors->first('view_2') }}</span>
                   @endif
                   </div>
+                  <div class="col-6">
+                    <div class="form-group">
+                    <label for="first-name-vertical">More Description </label>
+                    <textarea name="description" id="" class="form-control"></textarea>
+                    </div>
+                    @if ($errors->has('description'))
+                    <span class="text-danger">{{ $errors->first('description') }}</span>
+                    @endif
+                  </div>
                   <br>
 <hr>
                 <div class="col-6">

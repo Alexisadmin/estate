@@ -110,7 +110,9 @@
                 <li><strong>Price</strong>{{number_format( $house->price) }} FRW</li>
                 <li><strong>this houses also has</strong>: {{ $house->bedroom +$house->bathroom  }} <strong> Rooms and</strong> {{ $house->salon }} Sallon</li>
                 <li>This house is located in<strong> {{ $house->village }}</strong></li>
-                <li><strong></strong></li>
+                <span>
+                  {{ $house->description }}
+                </span>
 
               </ul>
               <li><a href="https://wa.me/c/8613207970914"><x-bxl-whatsapp style="height:40px" />See our Catalog Here</a></li>

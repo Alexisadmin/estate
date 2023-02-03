@@ -13,7 +13,7 @@ class HouseController extends Controller
     {
 
          // house mermission middleware
-         $this->middleware('permission:add-house', ['only' => ['create','store','index']]);
+         $this->middleware('permission:add-house', ['only' => ['create','store']]);
          $this->middleware('permission:delete-house', ['only' => ['destroy','']]);
          $this->middleware('permission:edit-house', ['only' => ['edit','update']]);
         
@@ -71,7 +71,7 @@ class HouseController extends Controller
         $plot->telephone = $request->telephone;
         $plot->email = $request->email;
         $plot->price = $request->price; 
-
+        $plot->description = $request->description; 
         if ($fimage = $request->file('front_image'))
         {
            $imageDestinationPath = 'uploads/';                        
@@ -166,7 +166,8 @@ class HouseController extends Controller
         $plot->housing_type = $request->housing_type;       
         $plot->telephone = $request->telephone;
         $plot->email = $request->email;
-        $plot->price = $request->price; 
+        $plot->price = $request->price;
+        $plot->description = $request->description;  
 
         if ($fimage = $request->file('front_image'))
         {
