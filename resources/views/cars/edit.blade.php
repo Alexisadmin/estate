@@ -195,7 +195,15 @@
               @endif
             </div>
           </div>
-
+          <div class="row mb-3">           
+            <label class="col-sm-2 form-label" for="basic-icon-default-message">More Description </label>
+            <div class="input-group input-group-merge">
+            <textarea name="description" id="" class="form-control">{{ $car->description }}</textarea>
+          </div>
+          @if ($errors->has('description'))
+          <span class="text-danger">{{ $errors->first('description') }}</span>
+          @endif
+        </div>
           <div class="row justify-content-end">
             <div class="col-sm-10">
               <button type="submit" class="btn btn-primary">Save Data</button>

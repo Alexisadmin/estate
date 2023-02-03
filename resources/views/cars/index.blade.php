@@ -93,11 +93,11 @@
             <div class="dropdown">
               <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded"></i></button>
               <div class="dropdown-menu">
-                {{-- @can('edit-car') --}}
+                @can('edit-car')
                 <a class="dropdown-item warning " href="/admin-cars/{{Crypt::encrypt($car['id'])}}/edit">Edit</a>
-                {{-- @endcan --}}
+                @endcan
                 
-                {{-- @can('delete-car') --}}
+                @can('delete-car')
 
                 {!! Form::open(['method' => 'DELETE','route' => ['admin-cars.destroy', Crypt::encrypt($car['id'])],'class'=>'dropdown-item']) !!}
          
@@ -106,7 +106,7 @@
             {!! Form::close() !!}
                   
                 
-               {{-- @endcan --}}
+               @endcan
             
               </div>
             </div>

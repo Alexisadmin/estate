@@ -37,13 +37,13 @@
           {{-- <li><a class="nav-link scrollto " href="cars">Cars</a></li> --}}
           <li><a class="nav-link scrollto" href="{{ route('about-us') }}">about-us</a></li>
           <li><a class="nav-link scrollto" href="{{ route('contact-us') }}">Contact</a></li>
-          <li class="dropdown"><a href="#"><span>Admin</span> <i class="bi bi-chevron-down"></i></a>
+          {{-- <li class="dropdown"><a href="#"><span>Admin</span> <i class="bi bi-chevron-down"></i></a>
             <ul>             
               <li class="dropdown"><a href="login"><span>Login</span> <i class="bi bi-lock"></i></a>
               </li>
               
             </ul>
-          </li>
+          </li> --}}
          
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -104,6 +104,9 @@
                 <li><strong>Plate Number</strong>: {{ $car->plate }}</li>
                
                 <li><strong>Price</strong>{{number_format( $car->price) }} FRW</li>
+                <span>
+                  {{ $car->description }}
+                </span>
                               </ul>
               <li><a href="https://wa.me/c/8613207970914"><x-bxl-whatsapp style="height:40px" />See our Catalog Here</a></li>
             </div>

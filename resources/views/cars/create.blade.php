@@ -78,7 +78,7 @@
             <div class="col-sm-10">
               <div class="input-group input-group-merge">
                 <span id="basic-icon-default-phone2" class="input-group-text"><i class="bx bx-phone"></i></span>
-                <input type="text" name="telephone" id="basic-icon-default-phone" class="form-control phone-mask" placeholder="658 799 8941" aria-label="658 799 8941" aria-describedby="basic-icon-default-phone2" />
+                <input type="number" name="telephone" id="basic-icon-default-phone" class="form-control phone-mask" placeholder="658 799 8941" aria-label="658 799 8941" aria-describedby="basic-icon-default-phone2" />
               </div>
               @if ($errors->has('telephone'))
               <span class="text-danger">{{ $errors->first('telephone') }}</span>
@@ -193,6 +193,15 @@
               <span class="text-danger">{{ $errors->first('price') }}</span>
               @endif
             </div>
+          </div>
+          <div class="row mb-3">           
+              <label class="col-sm-2 form-label" for="basic-icon-default-message">More Description </label>
+              <div class="input-group input-group-merge">
+              <textarea name="description" id="" class="form-control"></textarea>
+            </div>
+            @if ($errors->has('description'))
+            <span class="text-danger">{{ $errors->first('description') }}</span>
+            @endif
           </div>
 
           <div class="row justify-content-end">

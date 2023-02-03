@@ -47,7 +47,8 @@ class CarController extends Controller
     $plot->email = $request->email;
     $plot->telephone = $request->telephone;
     $plot->price = $request->price;
-    $plot->usage = $request->usage;    
+    $plot->usage = $request->usage;   
+    $plot->description = $request->description;   
     if ($fimage = $request->file('front_image'))
         {
            $imageDestinationPath = 'uploads/';                        
@@ -133,6 +134,7 @@ class CarController extends Controller
         $plot->telephone = $request->telephone;
         $plot->price = $request->price;
         $plot->usage = $request->usage;    
+        $plot->description = $request->description;    
         if ($fimage = $request->file('front_image'))
         {
            $imageDestinationPath = 'uploads/';                        
