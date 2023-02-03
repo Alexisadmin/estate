@@ -13,7 +13,7 @@ class PlotController extends Controller
     {
 
          // plot mermission middleware
-         $this->middleware('permission:add-plot', ['only' => ['create','store','index']]);
+         $this->middleware('permission:add-plot', ['only' => ['create','store']]);
          $this->middleware('permission:delete-plot', ['only' => ['destroy','']]);
          $this->middleware('permission:edit-plot', ['only' => ['edit','update']]);
         
@@ -65,6 +65,7 @@ class PlotController extends Controller
         $plot->telephone = $request->telephone;
         $plot->email = $request->email;
         $plot->price = $request->price; 
+        $plot->description = $request->description; 
         if ($fimage = $request->file('front_image'))
         {
            $imageDestinationPath = 'uploads/';                        
@@ -160,7 +161,7 @@ class PlotController extends Controller
         $plot->telephone = $request->telephone;
         $plot->email = $request->email;
         $plot->price = $request->price; 
-
+        $plot->description = $request->description; 
         if ($fimage = $request->file('front_image'))
          {
             $imageDestinationPath = 'uploads/';                        

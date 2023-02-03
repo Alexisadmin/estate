@@ -28,6 +28,10 @@ class PermissionTableSeeder extends Seeder
                'add-plot',
                'delete-plot',
 
+               'edit-car',
+               'add-car',
+               'delete-car',
+
                'edit-house',
                'add-house',
                'delete-house',

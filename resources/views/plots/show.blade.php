@@ -31,15 +31,15 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto" href="">plot</a></li>
-          <li><a class="nav-link scrollto active" href="plot">Plots</a></li>
-          <li><a class="nav-link scrollto" href="house">House</a></li>
-          <li><a class="nav-link scrollto " href="cars">Cars</a></li>
-          <li><a class="nav-link scrollto" href="about-us">about-us</a></li>
-          <li><a class="nav-link scrollto" href="contact-us">Contact</a></li>
-          <li class="dropdown"><a href="/login"><span>Admin</span> <i class="bi bi-chevron-down"></i></a>
+          <li><a class="nav-link scrollto" href="">Home</a></li>
+          <li><a class="nav-link scrollto active" href="{{ route('plot') }}">Plots</a></li>
+          <li><a class="nav-link scrollto" href="{{ route('house') }}">House</a></li>
+          <li><a class="nav-link scrollto " href="{{ route('cars') }}">Cars</a></li>
+          <li><a class="nav-link scrollto" href="{{ route('about-us') }}">about-us</a></li>
+          <li><a class="nav-link scrollto" href="{{ route('contact-us') }}">Contact</a></li>
+          <li class="dropdown"><a href=""><span>Admin</span> <i class="bi bi-chevron-down"></i></a>
             <ul>             
-              <li class="dropdown"><a href="/login"><span>Login</span> <i class="bi bi-clock"></i></a>
+              <li class="dropdown"><a href="{{ route('login') }}"><span>Login</span> <i class="bi bi-clock"></i></a>
               </li>
               
             </ul>
@@ -101,14 +101,14 @@
 
           <div class="col-lg-4">
             <div class="portfolio-info">
-              <h3>Plot Details</h3>
+              <h3>Details</h3>
               <ul>
                 <li><strong>Province</strong>:{{ $plot->province }}</li>
                 <li><strong>District</strong>: {{ $plot->district }}</li>
                 <li><strong>Sector</strong>: {{ $plot->sector }}</li>
                 <li><strong>Measures</strong>: {{ $plot->width }}X{{ $plot->length }}</li>
                 <li>This Plot is located in<strong> {{ $plot->village }}</strong></li>
-                
+                <span>{{ $plot->description }}</span>
 
               </ul>
               <li><a href="https://wa.me/c/8613207970914"><x-bxl-whatsapp style="height:40px" />See our Catalog also</a></li>

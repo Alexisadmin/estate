@@ -116,7 +116,7 @@
                 <div class="col-md-6">
                   <label for="first-name-vertical">Width</label>
                   <div class="form-group">
-                    <input type="text" name="width" value="{{ old('name') }}" id="" class="form-control">
+                    <input type="number" name="width" value="{{ old('name') }}" id="" class="form-control">
                   </div>
                   @if ($errors->has('width'))
                   <span class="text-danger">{{ $errors->first('width') }}</span>
@@ -125,7 +125,7 @@
                 <div class="col-md-6">
                   <label for="first-name-vertical">Length</label>
                   <div class="form-group">
-                    <input type="text" name="length" value="{{ old('name') }}" id="" class="form-control">
+                    <input type="number" name="length" value="{{ old('name') }}" id="" class="form-control">
                   </div>
                   @if ($errors->has('length'))
                   <span class="text-danger">{{ $errors->first('length') }}</span>
@@ -134,7 +134,7 @@
                   <div class="col-md-6">
                   <label for="first-name-vertical">Price </label> <small>in RWF</small>
                   <div class="form-group">
-                    <input type="text" name="price" value="{{ old('name') }}" id="" class="form-control">
+                    <input type="number" name="price" value="{{ old('name') }}" id="" class="form-control">
                   </div>
                   @if ($errors->has('price'))
                   <span class="text-danger">{{ $errors->first('price') }}</span>
@@ -178,12 +178,20 @@
                   <span class="text-danger">{{ $errors->first('view_2') }}</span>
                   @endif
                   </div>
-                  <br>
-<hr>
-                <div class="col-6">
-                 <div class="form-group">
+                  <div class="col-6">
+                    <div class="form-group">
+                    <label for="first-name-vertical">More Description </label>
+                    <textarea name="description" id="" class="form-control"></textarea>
+                    </div>
+                    @if ($errors->has('description'))
+                    <span class="text-danger">{{ $errors->first('description') }}</span>
+                    @endif
+                  </div>
+
+                  <div class="col-12">
+                 {{-- <div class="form-group"> --}}
                     <input type="submit"  class="btn btn-warning mr-1 mb-1" value="Submit">
-                </div>
+                {{-- </div> --}}
 
 
                 </div>

@@ -125,7 +125,7 @@
                 <div class="col-md-6">
                   <label for="first-name-vertical">Length</label>
                   <div class="form-group">
-                    <input type="text" name="length" value="{{  $plot->length}}" id="" class="form-control">
+                    <input type="number" name="length" value="{{  $plot->length}}" id="" class="form-control">
                   </div>
                   @if ($errors->has('length'))
                   <span class="text-danger">{{ $errors->first('length') }}</span>
@@ -134,7 +134,7 @@
                   <div class="col-md-6">
                   <label for="first-name-vertical">Price </label> <small>in RWF</small>
                   <div class="form-group">
-                    <input type="text" name="price" value="{{  $plot->price}}" id="" class="form-control">
+                    <input type="number" name="price" value="{{  $plot->price}}" id="" class="form-control">
                   </div>
                   @if ($errors->has('price'))
                   <span class="text-danger">{{ $errors->first('price') }}</span>
@@ -178,7 +178,15 @@
                   <span class="text-danger">{{ $errors->first('view_2') }}</span>
                   @endif
                   </div>
-                 <br>
+                  <div class="col-6">
+                    <div class="form-group">
+                    <label for="first-name-vertical">More Description </label>
+                    <textarea name="description" id="" class="form-control">{{ $plot->description }}</textarea>
+                    </div>
+                    @if ($errors->has('description'))
+                    <span class="text-danger">{{ $errors->first('description') }}</span>
+                    @endif
+                  </div>
                  <hr>
                  <div class="col-6">
                  <div class="form-group">
