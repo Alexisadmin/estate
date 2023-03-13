@@ -37,14 +37,7 @@
           <li><a class="nav-link scrollto " href="{{ route('cars') }}">Cars</a></li>
           <li><a class="nav-link scrollto" href="{{ route('about-us') }}">about-us</a></li>
           <li><a class="nav-link scrollto" href="{{ route('contact-us') }}">Contact</a></li>
-          {{-- <li class="dropdown"><a href=""><span>Admin</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>             
-              <li class="dropdown"><a href="{{ route('login') }}"><span>Login</span> <i class="bi bi-clock"></i></a>
-              </li>
               
-            </ul>
-          </li> --}}
-         
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -153,8 +146,8 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="/">plot</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{{route('plot')}}">Plots</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/">Home</a></li>
+              <li><i class="bx bx-chevron-right active"></i> <a href="{{route('plot')}}">Plots</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="{{route('house')}}">Houses</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="{{route('cars')}}">Cars</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="{{route('about-us')}}">About-us</a></li>

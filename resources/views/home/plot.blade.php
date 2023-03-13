@@ -28,20 +28,13 @@
   
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto " href="/">Home</a></li>
-          <li><a class="nav-link scrollto active" href="plot">Plots</a></li>
-          <li><a class="nav-link scrollto" href="house">House</a></li>
-          <li><a class="nav-link scrollto " href="cars">Cars</a></li>
-          <li><a class="nav-link scrollto" href="about-us">about-us</a></li>
-          <li><a class="nav-link scrollto" href="contact-us">Contact</a></li>
-          {{-- <li class="dropdown"><a href="#"><span>Admin</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>             
-              <li class="dropdown"><a href="{{ route('login') }}"><span>Login</span> <i class="bi bi-lock"></i></a>
-              </li>
+          <li><a class="nav-link scrollto" href="{{ url('/') }}">Home</a></li>
+          <li><a class="nav-link scrollto active" href="{{ route('plot') }}">Plots</a></li>
+          <li><a class="nav-link scrollto" href="{{ route('house') }}">House</a></li>
+          <li><a class="nav-link scrollto " href="{{ route('cars') }}">Cars</a></li>
+          <li><a class="nav-link scrollto" href="{{ route('about-us') }}">about-us</a></li>
+          <li><a class="nav-link scrollto" href="{{ route('contact-us') }}">Contact</a></li>
               
-            </ul>
-          </li> --}}
-         
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
