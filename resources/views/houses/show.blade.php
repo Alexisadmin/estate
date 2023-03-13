@@ -31,7 +31,7 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto" href="">house</a></li>
+          <li><a class="nav-link scrollto" href="{{ url('/') }}">house</a></li>
           <li><a class="nav-link scrollto " href="{{ route('plot') }}">Plot</a></li>
           <li><a class="nav-link scrollto active" href="{{ route('house') }}">House</a></li>
           <li><a class="nav-link scrollto " href="{{ route('cars') }}">Cars</a></li>

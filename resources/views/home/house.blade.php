@@ -28,7 +28,7 @@
   
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto " href="">Home</a></li>
+          <li><a class="nav-link scrollto "  href="{{ url('/') }}">Home</a></li>
           <li><a class="nav-link scrollto " href="{{ route('plot') }}">Plots</a></li>
           <li><a class="nav-link scrollto active" href="{{ route('house') }}">House</a></li>
           <li><a class="nav-link scrollto " href="{{ route('cars') }}">Cars</a></li>
@@ -91,6 +91,7 @@
             <div class="member-info">
             <strong class="text-success">Price</strong> <span>{{ number_format($house->price)}} FRW</span>
             </div>
+          Click   <a  href="/house-details/{{Crypt::encrypt($house['id'])}}" title="More Details"><strong>Here <strong></a> for more details
           </div>
           @endforeach
         </div>
@@ -116,7 +117,7 @@
               nyamirambo Sector <br>
               Maison tresor-2 <sup>nd</sup>Floor <br>
               <strong>Phone:</strong> +250 787 812 489 / +8613207970914 <br>
-              <strong>Email:</strong> easyestate@gmail.com<br>
+              <strong>Email:</strong>customer@easyestaterwanda.com<br>
             </p>
           </div>
 
