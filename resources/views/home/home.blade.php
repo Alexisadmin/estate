@@ -35,15 +35,7 @@
           <li><a class="nav-link scrollto" href="{{ route('house') }}">House</a></li>
           <li><a class="nav-link scrollto " href="{{ route('cars') }}">Cars</a></li>
           <li><a class="nav-link scrollto" href="{{ route('about-us') }}">about-us</a></li>
-          <li><a class="nav-link scrollto" href="{{ route('contact-us') }}">Contact-us</a></li>
-          {{-- <li class="dropdown"><a href="#"><span>Admin</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>             
-              <li class="dropdown"><a href="{{ route('login') }}"><span>Login</span> <i class="bi bi-lock"></i></a>
-              </li>
-              
-            </ul>
-          </li> --}}
-         
+          <li><a class="nav-link scrollto" href="{{ route('contact-us') }}">Contact-us</a></li>               
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -63,7 +55,7 @@
             Instagram searches for homes and plots that are available online and through our 
             office, which allows customers to view multiple properties simultaneously in easy 
             ways of mouse clicks.</h2>
-          <div><a href="#about" class="btn-get-started scrollto">Get Started</a></div>
+          {{-- <div><a href="#about" class="btn-get-started scrollto">Get Started</a></div> --}}
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img">
           <img src="assets/img/logo/easy.jpeg" class="img-fluid" alt="">

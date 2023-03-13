@@ -28,7 +28,7 @@
   
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto " href="#">Home</a></li>
+          <li><a class="nav-link scrollto " href="/">Home</a></li>
           <li><a class="nav-link scrollto active" href="plot">Plots</a></li>
           <li><a class="nav-link scrollto" href="house">House</a></li>
           <li><a class="nav-link scrollto " href="cars">Cars</a></li>
@@ -36,7 +36,7 @@
           <li><a class="nav-link scrollto" href="contact-us">Contact</a></li>
           {{-- <li class="dropdown"><a href="#"><span>Admin</span> <i class="bi bi-chevron-down"></i></a>
             <ul>             
-              <li class="dropdown"><a href="{{ route('login') }}"><span>Login</span> <i class="bi bi-clock"></i></a>
+              <li class="dropdown"><a href="{{ route('login') }}"><span>Login</span> <i class="bi bi-lock"></i></a>
               </li>
               
             </ul>
@@ -76,7 +76,7 @@
         <div class="row portfolio-container">
          @foreach ($plots as $key=> $plot )    
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="col-lg-4 col-md-6 portfolio-item">
             <div class="portfolio-wrap">
               <img src="{{ asset('uploads/' . $plot->front_image) }}" class="img-fluid" alt="">
               <div class="portfolio-info">
@@ -84,13 +84,16 @@
                 <p class="Text-success">Now Available</p>
                 <div class="portfolio-links">         
                 
-                <a  href="/more-plot/{{Crypt::encrypt($plot['id'])}}" title="More Details"><i class="bx bx-link"></i></a>
+                <a  href="/more-plot/{{Crypt::encrypt($plot['id'])}}" title="More Details"><i class="bx bx-link">click for more details</i></a>
                 </div>
               </div>
+              
             </div>
+          
             <div class="member-info">
             <strong class="text-success">Price</strong> <span>{{ number_format($plot->price)}} FRW</span>
             </div>
+           Click <a  href="/more-plot/{{Crypt::encrypt($plot['id'])}}" class="btn-btn success"><i class="bx bxl-hand"></i><strong>Here </strong></a>for more detais
           </div>
           @endforeach
         </div>
@@ -116,7 +119,7 @@
               nyamirambo Sector <br>
               Maison tresor-2 <sup>nd</sup>Floor <br>
               <strong>Phone:</strong> +250 787 812 489 / +8613207970914 <br>
-              <strong>Email:</strong> easyestate@gmail.com<br>
+              <strong>Email:</strong> customer@easyestaterwanda.com<br>
             </p>
           </div>
 

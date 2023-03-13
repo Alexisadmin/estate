@@ -109,7 +109,6 @@ class PlotController extends Controller
   
     public function show($id)
     {
-     
         $encId = Crypt::decrypt($id);
         $plot   = Plot::find($encId);  
        
