@@ -77,7 +77,7 @@
                 <p class="Text-success">Now Available</p>
                 <div class="portfolio-links">         
                 
-                <a  href="/more-plot/{{Crypt::encrypt($plot['id'])}}" title="More Details"><i class="bx bx-link">click for more details</i></a>
+                <a  href="/more-plot/{{Crypt::encrypt($plot['id'])}}" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
               
