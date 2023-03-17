@@ -22,13 +22,13 @@
         <div class="col-sm-7">
           <div class="card-body">
             <center>
-              <h5 class="card-title text-secondary">Sold plots</h5>
-              <h5> <strong class="text-warning float-center">{{number_format(DB::table('plots')->where('status','sold')->count())}}</strong> 
+              <h5 class="card-title plot">Sold plots
+              <strong class="text-warning float-center">{{number_format(DB::table('plots')->where('status','sold')->count())}}</strong> 
           
             </center>
          
           @can('user-create')
-                      <p class="mb-0"> 
+                      <p class="mb-0 user"> 
                         Users <br>
             <span class="fw-bold float-right">{{number_format(DB::table('users')->count())}}</span>  </p> 
             @endcan
