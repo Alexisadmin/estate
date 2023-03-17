@@ -111,7 +111,29 @@ and our clients to hold us accountable to these values:
   <!-- ======= Footer ======= -->
   <footer id="footer">
 
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <h4>Join Our Newsletter</h4>
+           
+            <form action="{{ route('subscribe.store') }}" method="POST">
+              @csrf
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+            @error('email')
+            <span class="text-warning">{{ $message }}</span>
+            @enderror
 
+            @if ($message = Session::get('success'))
+            <div class="alert alert-success">
+                <p>{{ $message }}</p>
+            </div>
+        @endif
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="footer-top">
       <div class="container">
         <div class="row">
@@ -154,6 +176,7 @@ and our clients to hold us accountable to these values:
 
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Social Networks</h4>
+          
             <p>Please Follow us on our social Media</p>
             <div class="social-links mt-3">
               <a href="https://www.facebook.com/profile.php?id=100068283980411&mibextid=LQQJ4d" class="facebook"><i class="bx bxl-facebook"></i></a>

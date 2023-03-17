@@ -21,13 +21,22 @@
       <div class="d-flex align-items-end row">
         <div class="col-sm-7">
           <div class="card-body">
-            <h5 class="card-title text-secondary">Sold plots</h5>
-             <h5> <strong class="text-warning float-center">{{number_format(DB::table('plots')->where('status','sold')->count())}}</strong> 
+            <center>
+              <h5 class="card-title text-secondary">Sold plots</h5>
+              <h5> <strong class="text-warning float-center">{{number_format(DB::table('plots')->where('status','sold')->count())}}</strong> 
+          
+            </center>
          
           @can('user-create')
                       <p class="mb-0"> 
-            <span class="fw-bold float-right">{{number_format(DB::table('users')->count())}}</span> <br> Users</p> 
+                        Users <br>
+            <span class="fw-bold float-right">{{number_format(DB::table('users')->count())}}</span>  </p> 
             @endcan
+           
+               <p class="text-success sub">subscribers <br>
+              <span class="text-warning">  {{number_format(DB::table('subscribes')->count())}}</span>
+               </p> 
+              
       @can('dashboard-details')
       <a href="admin-plots/" class="btn btn-sm btn-outline-primary">View more</a>
       @endcan

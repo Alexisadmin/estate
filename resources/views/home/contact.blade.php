@@ -42,7 +42,7 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto " href="#">Home</a></li>
+          <li><a class="nav-link scrollto " href="{{ url('/') }}">Home</a></li>
           <li><a class="nav-link scrollto" href="{{ route('plot') }}">Plots</a></li>
           <li><a class="nav-link scrollto" href="{{ route('house') }}">House</a></li>
           <li><a class="nav-link scrollto " href="{{ route('cars') }}">Cars</a></li>

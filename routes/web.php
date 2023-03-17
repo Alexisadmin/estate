@@ -9,6 +9,7 @@ use App\Http\Controllers\PlotController;
 use App\Http\Controllers\HouseController;
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\SubscribeController;
 $controller_path = 'App\Http\Controllers';
 
 //user link 
@@ -27,7 +28,7 @@ Auth::routes();
   
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 // Route::get('dashboard', $controller_path . '\\HomeController@index')->name('dasboard');
- 
+Route::resource('subscribe', SubscribeController::class);
 Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles', RoleController::class);
     Route::resource('users', UserController::class);
@@ -35,6 +36,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('admin-houses', HouseController::class);
     Route::resource('admin-cars', CarController::class);
     Route::resource('posts', PostController::class);
+  
    
 });
 
