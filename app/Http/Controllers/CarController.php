@@ -24,16 +24,16 @@ class CarController extends Controller
     public function store(Request $request)
     { $request->validate([
         'car_name' => 'required|min:3|max:255',
-        'plate' => 'required|max:255',
+      //   'plate' => 'required|max:255',
         'province' => 'required|min:3|max:255',
         'district' => 'required|min:3|max:255',
         'owner' => 'required|min:3|max:255',             
-        'telephone' => 'required',
-        'email' => 'required|unique:cars|max:255',
+      //   'telephone' => 'required',
+      //   'email' => 'required|unique:cars|max:255',
         'price' => 'required',  
         'usage'=>'required',          
-        'front_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:510000',
-        'side_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:510000',
+      //   'front_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:510000',
+      //   'side_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:510000',
    //      'view_1' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:510000',
    //      'view_2' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:510000',
      ]);
@@ -110,16 +110,16 @@ class CarController extends Controller
         
          $request->validate([
             'car_name' => 'required|min:3|max:255',
-            'plate' => 'required',
+            // 'plate' => 'required',
             'province' => 'required|min:3|max:255',
             'district' => 'required|min:3|max:255',
             'owner' => 'required|min:3|max:255',             
-            'telephone' => 'required',
+            // 'telephone' => 'required',
             'email' => 'required',
             'price' => 'required',  
             'usage'=>'required',          
-            'front_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:510000',
-            'side_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:510000',
+            // 'front_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:510000',
+            // 'side_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:510000',
             // 'view_1' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:510000',
             // 'view_2' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:510000',
         ]);
