@@ -20,6 +20,15 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XZ04STCQS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8XZ04STCQS');
+</script>
 <body>
 
   <!-- ======= Header ======= -->
@@ -29,7 +38,7 @@
   
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto " href="">Home</a></li>
+          <li><a class="nav-link scrollto " href="{{ url('') }}">Home</a></li>
           <li><a class="nav-link scrollto " href="{{ route('plot') }}">Plots</a></li>
           <li><a class="nav-link scrollto " href="{{ route('house') }}">House</a></li>
           <li><a class="nav-link scrollto " href="{{ route('cars') }}">Cars</a></li>
