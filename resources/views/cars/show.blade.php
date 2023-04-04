@@ -101,7 +101,7 @@
               <ul>
                 <li><strong class="text-warning">This car is available for {{ $car->usage }}</strong></li>
                 <li><strong>Brand</strong>:{{ $car->car_name }}</li>
-                <li><strong>Plate Number</strong>: {{ $car->plate }}</li>
+                {{-- <li><strong>Plate Number</strong>: {{ $car->plate }}</li> --}}
                
                 <li><strong>Price</strong>{{number_format( $car->price) }} FRW</li>
                 <span>

@@ -72,7 +72,7 @@
 
         <div class="section-title">
           <h2>Cars</h2>
-          <p>Below Cars all all availble for Sales & rent if you are interrested please contact us  for more information                                                                                                                                 </p>
+          <p>Below Cars all all availble for Sales or rent if you are interrested please contact us  for more information                                                                                                                                 </p>
         </div>
         <div class="row portfolio-container">
          @foreach ($cars as $key=> $car )
@@ -81,18 +81,18 @@
             <div class="portfolio-wrap">
               <img src="{{ asset('uploads/' . $car->front_image) }}" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Available in {{ $car->district }} District</h4>
-                <p class="Text-success">Now Available</p>
+                {{-- <h4>Available in {{ $car->district }} District</h4> --}}
+                {{-- <p class="Text-success">Now Available</p> --}}
                 <div class="portfolio-links">         
                 
-                <a  href="/car-details/{{Crypt::encrypt($car['id'])}}" title="More Details"><i class="bx bx-link"></i></a>
+                <a  href="/cars-details/{{Crypt::encrypt($car['id'])}}" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
             </div>
             <div class="member-info">
             <strong class="text-success">Price</strong> <span>{{ number_format($car->price)}} FRW</span>
             </div>
-          Click   <a  href="/car-details/{{Crypt::encrypt($car['id'])}}" title="More Details"><strong>Here <strong></a> for more details
+          Click   <a  href="/cars-details/{{Crypt::encrypt($car['id'])}}" title="More Details"><strong>Here <strong></a> for more details
           </div>
           @endforeach
         </div>
@@ -142,7 +142,7 @@
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Buy & Selling cars</a></li>
               {{-- <li><i class="bx bx-chevron-right"></i> <a href="#">Buying cars</a></li> --}}
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Buying cars</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Buying car s</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Selling car</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Car Rental</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Car Selling</a></li>
