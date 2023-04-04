@@ -24,19 +24,19 @@ class CarController extends Controller
     public function store(Request $request)
     { $request->validate([
         'car_name' => 'required|min:3|max:255',
-        'plate' => 'required|unique:cars|max:255',
+        'plate' => 'required|max:255',
         'province' => 'required|min:3|max:255',
         'district' => 'required|min:3|max:255',
         'owner' => 'required|min:3|max:255',             
-        'telephone' => 'required|unique:cars|max:15',
+        'telephone' => 'required',
         'email' => 'required|unique:cars|max:255',
         'price' => 'required',  
         'usage'=>'required',          
-        'front_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        'side_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        'view_1' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        'view_2' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-    ]);
+        'front_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:510000',
+        'side_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:510000',
+   //      'view_1' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:510000',
+   //      'view_2' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:510000',
+     ]);
     $plot = new Car;
   
     $plot->car_name = $request->car_name;
@@ -118,10 +118,10 @@ class CarController extends Controller
             'email' => 'required',
             'price' => 'required',  
             'usage'=>'required',          
-            'front_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'side_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'view_1' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'view_2' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'front_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:510000',
+            'side_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:510000',
+            // 'view_1' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:510000',
+            // 'view_2' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:510000',
         ]);
         $plot = Car::find($id);
       
