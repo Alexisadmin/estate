@@ -28,7 +28,7 @@
   <!-- project Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-</head>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8XZ04STCQS"></script>
 <script>
@@ -38,6 +38,7 @@
 
   gtag('config', 'G-8XZ04STCQS');
 </script>
+</head>
 <body>
 
   <!-- ======= Header ======= -->
