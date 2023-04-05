@@ -81,18 +81,17 @@
 
         <div class="section-title">
           <h2>Houses</h2>
-          <p>Below houses all availble for Sales, please contact us  for more detail                                                                                                                                 </p>
+          <p>Below houses all availble for Sales, please contact us for more detail                                                                                                                                 </p>
         </div>
         <div class="row portfolio-container">
          @foreach ($houses as $key=> $house )    
-
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
               <img src="{{ asset('uploads/' . $house->front_image) }}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Available in {{ $house->district }} District</h4>
                 <p class="Text-success">Now Available</p>
-                <div class="portfolio-links">         
+                <div class="portfolio-links">      
                 
                 <a  href="/house-details/{{Crypt::encrypt($house['id'])}}" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
