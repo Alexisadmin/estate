@@ -81,7 +81,7 @@
 
         <div class="section-title">
           <h2>Houses</h2>
-          <p>Below houses all availble for Sales, please contact us for more detail                                                                                                                                 </p>
+          <p>Below houses are availble for Sale, please contact us for more detail                                                                                                                                 </p>
         </div>
         <div class="row portfolio-container">
          @foreach ($houses as $key=> $house )    

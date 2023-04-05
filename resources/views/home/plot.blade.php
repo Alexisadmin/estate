@@ -74,7 +74,7 @@
 
         <div class="section-title">
           <h2>Plots</h2>
-          <p>Below plots all availble for Sales if you are interrested please contact us                                                                                                                                   </p>
+          <p>Below plots are all availble for Sale,please contact us                                                                                                                                   </p>
         </div>
         <div class="row portfolio-container">
          @foreach ($plots as $key=> $plot )    

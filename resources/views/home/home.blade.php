@@ -40,9 +40,9 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="">Home</a></li>
+          <li><a class="nav-link scrollto active" href="{{ url('/') }}">Home</a></li>
           <li><a class="nav-link scrollto" href="{{ route('plot') }}">Plots</a></li>
-          <li><a class="nav-link scrollto" href="{{ route('house') }}">House</a></li>
+          <li><a class="nav-link scrollto " href="{{ route('house') }}">House</a></li>
           <li><a class="nav-link scrollto " href="{{ route('cars') }}">Cars</a></li>
           <li><a class="nav-link scrollto" href="{{ route('about-us') }}">about-us</a></li>
           <li><a class="nav-link scrollto" href="{{ route('contact-us') }}">Contact-us</a></li>               
