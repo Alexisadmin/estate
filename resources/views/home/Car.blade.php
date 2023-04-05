@@ -81,7 +81,7 @@
 
         <div class="section-title">
           <h2>Cars</h2>
-          <p>Below car are availble for rent, please contact us  for more information                                                                                                                                 </p>
+          <p>Below cars are availble for rent, please contact us  for more information                                                                                                                                 </p>
         </div>
         <div class="row portfolio-container">
          @foreach ($cars as $key=> $car )

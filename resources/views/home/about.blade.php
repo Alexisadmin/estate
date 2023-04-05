@@ -168,7 +168,7 @@ and our clients to hold us accountable to these values:</p>
               <div class="testimonial-item">
                 <img src="assets/img/logo/ceo.jpeg" class="testimonial-img" alt="">
                
-                <h3>Anathole URAGIWE NIMANA</h3>
+                <h3>U.Anathole</h3>
                 <h4>CEO &amp; Founder</h4>
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
